@@ -20,13 +20,86 @@ input.oe{ime-mode:disabled;}		    /* 고정 영문입력 only-enlish */
 .row::after{position:initial; display:block; clear:both;}
 .rowfull{display:inline-block; width:100%; vertical-align:top;}
 
-/* 웹 접근성 가리기 */
-.wa{position:absolute; z-index:-999; opacity:0; width:0; height:0; left:-999%; top:-999%;}
+/* 웹 접근성 숨김 처리 (display:none, visibility:hidden은 사용할 수 없습니다.) */
+.wa{position:absolute !important; z-index:-999; opacity:0; width:0; height:0; left:-999%; top:-999%;}
 
 /* ****************************************************************************************************************************************************************************** */
 
 
 /* ****************************************************************************************************************************************************************************** */
+
+
+/* Object-fit */
+.off{object-fit:fill;}
+.ofc{object-fit:cover;}
+.ofct{object-fit:contain;}
+.ofn{object-fit:none;}
+.ofsd{object-fit:scale-down;}
+
+/* 정렬 */
+.tty-50p{transform:translateY(-50%);}
+.ttx-50p{transform:translateX(-50%);}
+
+/* 높이 초기화 */
+.ha{height:auto;}
+.hai{height:auto !important;}
+
+/* 행간 초기화 */
+.lhi{line-height:initial;}
+.lhii{line-height:initial !important;}
+
+/* position 초기화 */
+.ta{top:auto;}
+.ra{right:auto;}
+.ba{bottom:auto;}
+.la{left:auto;}
+
+.tai{top:auto !important;}
+.rai{right:auto !important;}
+.bai{bottom:auto !important;}
+.lai{left:auto !important;}
+
+.t0{top:0;}
+.r0{right:0;}
+.b0{bottom:0;}
+.l0{left:0;}
+
+.t0i{top:0 !important;}
+.r0i{right:0 !important;}
+.b0i{bottom:0 !important;}
+.l0i{left:0 !important;}
+
+/* padding 초기화 */
+.pa0{padding:0;}
+.pt0{padding-top:0;}
+.pr0{padding-right:0;}
+.pb0{padding-bottom:0;}
+.pl0{padding-left:0;}
+
+.pa0i{padding:0 !important;}
+.pt0i{padding-top:0 !important;}
+.pr0i{padding-right:0 !important;}
+.pb0i{padding-bottom:0 !important;}
+.pl0i{padding-left:0 !important;}
+
+/* margin 초기화 */
+.ma0{margin:0;}
+.mt0{margin-top:0;}
+.mr0{margin-right:0;}
+.mb0{margin-bottom:0;}
+.ml0{margin-left:0;}
+
+.maai{margin:auto !important;}
+.mta{margin-top:auto;}
+.mra{margin-right:auto;}
+.mba{margin-bottom:auto;}
+.mla{margin-left:auto;}
+
+.ma0i{margin:0 !important;}
+.mt0i{margin-top:0 !important;}
+.mr0i{margin-right:0 !important;}
+.mb0i{margin-bottom:0 !important;}
+.ml0i{margin-left:0 !important;}
 
 /* backgrond */
 .bnc{background:no-repeat center;}
@@ -64,7 +137,7 @@ input.oe{ime-mode:disabled;}		    /* 고정 영문입력 only-enlish */
 /* display */
 .di{display:inline;}
 .db{display:block;}
-.di{display:inline-block;}
+.dib{display:inline-block;}
 .dn{display:none;}
 .dt{display:table;}
 .dtc{display:table-cell;}
@@ -77,6 +150,8 @@ input.oe{ime-mode:disabled;}		    /* 고정 영문입력 only-enlish */
 /* Flex Box */
 .df{display:flex;}
 .dif{display:inline-flex;}
+.fa{flex:auto;}
+.fi{flex:initial;}
 .fdr{flex-direction:row;}
 .fdrr{flex-direction:row-reverse;}
 .fdc{flex-direction:column;}
@@ -84,6 +159,7 @@ input.oe{ime-mode:disabled;}		    /* 고정 영문입력 only-enlish */
 .fwn{flex-wrap:nowrap;}
 .fw{flex-wrap:wrap;}
 .fwr{flex-wrap:wrap-reverse;}
+.fgu{flex-grow:unset;}
 .jcfs{justify-content:flex-start;}
 .jcfe{justify-content:flex-end;}
 .jcc{justify-content:center;}
@@ -107,34 +183,49 @@ input.oe{ime-mode:disabled;}		    /* 고정 영문입력 only-enlish */
 .asc{align-self:center;}
 .asb{align-self:baseline;}
 
+/* Flex-shrink */
+.fshi{flex-shrink:initial;}
+.fshu{flex-shrink:unset;}
+
 /* table layout */
 .tlf{table-layout:fixed;}
+.tla{table-layout:auto;}
 
 /* Fonts Style */
 .fsn{font-style:normal;}
 .fsi{font-style:italic;}
+
 .fso{font-style:oblique;}
 .fs.initial{font-style:initial;}
 .fs.inherit{font-style:inherit;}
 
 /* word */
-.wb{word-break:break-all;}											
+.wb{word-break:break-all;}									
 .wsn{white-space:nowrap;}											
 .wsp{white-space:pre;}												
 .wspl{white-space:pre-line;}											
+.wsi{white-space:initial;}
 
 /* border */
-.b0,
+.b0{border:0;}
 .bn{border:0;}
 .bt0{border-top:0;}
 .br0{border-right:0;}
 .bb0{border-bottom:0;}
 .bl0{border-left:0;}
 
+.ba0i{border:0 !important;}
+.bni{border:0 !important;}
+.bt0i{border-top:0 !important;}
+.br0i{border-right:0 !important;}
+.bb0i{border-bottom:0 !important;}
+.bl0i{border-left:0 !important;}
+
 /* align */
 .vat{vertical-align:top;}
 .vam{vertical-align:middle;}
 .vab{vertical-align:bottom;}
+.vabl{vertical-align:baseline;}
 
 /* Overflow */
 .oa{overflow:auto;}
@@ -151,6 +242,7 @@ input.oe{ime-mode:disabled;}		    /* 고정 영문입력 only-enlish */
 .ct{cursor:text;}
 .cw{cursor:wait;}
 .cn{cursor:none;}
+.cna{cursor:not-allowed;}
 
 /* ****************************************************************************************************************************************************************************** */
 
@@ -162,6 +254,34 @@ $maximumPx:101;
 $maximumRem:101;
 $minimum:10;
 $maximum:101;
+
+/* Flex Grow */
+@for $i from 0 to 10{
+    @for $j from 0 to 11{
+        @if($j == 0) {
+            .fg-#{$i}{
+                flex-grow:#{$i}
+            } 
+        } @else if($i < 1) {
+            .fg-#{$i}#{$j}{
+                flex-grow:$i + $j * 0.1
+            } 
+        } @else if $i > 1 and $i < 10 {
+            .fg-#{$i}-#{$j}{
+                flex-grow:$i + $j * 0.1
+            } 
+        }
+    }
+}
+
+
+/* Flex-shrink */
+@for $i from 0 to 11{
+    .fsh#{$i}{
+        flex-shrink:$i
+    }
+}
+
 
 @for $i from 2 to 10{
     .lc#{$i}{
@@ -208,7 +328,7 @@ $maximum:101;
                 font-size:#{$i} + rem
             } 
         } @else if($i < 10) {
-            .fs#{$i}0#{$j}rem{
+            .fs#{$i}-#{$j}rem{
                 font-size:$i + $j * 0.1rem
             } 
         }
@@ -223,7 +343,7 @@ $maximum:101;
                 line-height:#{$i} + rem
             } 
         } @else if($i < 10) {
-            .lh#{$i}0#{$j}rem{
+            .lh#{$i}-#{$j}rem{
                 line-height:$i + $j * 0.1rem
             } 
         }
@@ -238,7 +358,7 @@ $maximum:101;
                 line-height:$i
             } 
         } @else if($i < 10) {
-            .lh#{$i}0#{$j}{
+            .lh#{$i}-#{$j}{
                 line-height:$i + $j * 0.1
             } 
         }
@@ -260,7 +380,7 @@ $maximum:101;
                 line-height:#{$i} + vh
             } 
         } @else if($i < 10) {
-            .lh#{$i}0#{$j}vh{
+            .lh#{$i}-#{$j}vh{
                 line-height:$i + $j * 0.1vh
             } 
         }
@@ -270,133 +390,72 @@ $maximum:101;
 
 /* padding (all - px) */
 @for $i from 0 to $maximum{
-    @if($i == 0) {
-        .pa#{$i}{
-            padding:0
-        } 
-    } @else if($i < 10) {
-        .pa#{$i}px{
-            padding:#{$i} + px
-        } 
-    }
-   
+    .pa#{$i}px{
+        padding:#{$i} + px
+    } 
 }
 
 /* padding (top - px) */
 @for $i from 0 to $maximum{
-    @if($i == 0) {
-        .pt#{$i}{
-            padding-top:0
-        } 
-    } @else if($i < 10) {
-        .pt#{$i}px{
-            padding-top:#{$i} + px
-        } 
-    }
+    .pt#{$i}px{
+        padding-top:#{$i} + px
+    } 
 }
 
 /* padding (right - px) */
 @for $i from 0 to $maximum{
-    @if($i == 0) {
-        .pr#{$i}{
-            padding-right:0
-        } 
-    } @else if($i < 10) {
-        .pr#{$i}px{
-            padding-right:#{$i} + px
-        } 
-    }
+    .pr#{$i}px{
+        padding-right:#{$i} + px
+    } 
 }
 
 /* padding (bottom - px) */
 @for $i from 0 to $maximum{
-    @if($i == 0) {
-        .pb#{$i}{
-            padding-bottom:0
-        } 
-    } @else if($i < 10) {
-        .pb#{$i}px{
-            padding-bottom:#{$i} + px
-        } 
-    }
+    .pb#{$i}px{
+        padding-bottom:#{$i} + px
+    } 
 }
 
 /* padding (left - px) */
 @for $i from 0 to $maximum{
-    @if($i == 0) {
-        .pl#{$i}{
-            padding-left:0
-        } 
-    } @else if($i < 10) {
-        .pl#{$i}px{
-            padding-left:#{$i} + px
-        } 
-    }
+    .pl#{$i}px{
+        padding-left:#{$i} + px
+    } 
 }
 
 /* margin (all - px) */
 @for $i from 0 to $maximum{
-    @if($i == 0) {
-        .ma#{$i}{
-            margin:0
-        } 
-    } @else if($i < 10) {
-        .ma#{$i}px{
-            margin:#{$i} + px
-        } 
-    }
+    .ma#{$i}px{
+        margin:#{$i} + px
+    } 
 }
 
 /* margin (top - px) */
 @for $i from 0 to $maximum{
-    @if($i == 0) {
-        .mt#{$i}{
-            margin-top:0
-        } 
-    } @else if($i < 10) {
-        .mt#{$i}px{
-            margin-top:#{$i} + px
-        } 
-    }
+    .mt#{$i}px{
+        margin-top:#{$i} + px
+    } 
 }
 
 /* margin (right - px) */
 @for $i from 0 to $maximum{
-    @if($i == 0) {
-        .mr#{$i}{
-            margin-right:0
-        } 
-    } @else if($i < 10) {
-        .mr#{$i}px{
-            margin-right:#{$i} + px
-        } 
-    }
+    .mr#{$i}px{
+        margin-right:#{$i} + px
+    } 
 }
 
 /* margin (bottom - px) */
 @for $i from 0 to $maximum{
-    @if($i == 0) {
-        .mb#{$i}{
-            margin-bottom:0
-        } 
-    } @else if($i < 10) {
-        .mb#{$i}px{
-            margin-bottom:#{$i} + px
-        } 
-    }
+    .mb#{$i}px{
+        margin-bottom:#{$i} + px
+    } 
 }
 
 /* margin (left - px) */
 @for $i from 0 to $maximum{
-    @if($i == 0) {
-        .ml#{$i}{
-            margin-left:0
-        } 
-    } @else if($i < 10) {
-        .ml#{$i}px{
-            margin-left:#{$i} + px
-        } 
-    }
+    .ml#{$i}px{
+        margin-left:#{$i} + px
+    } 
 }
 
 /* padding (top) */
@@ -407,7 +466,7 @@ $maximum:101;
                 padding-top:#{$i} + rem
             } 
         } @else if($i < 10) {
-            .pt#{$i}0#{$j}rem{
+            .pt#{$i}-#{$j}rem{
                 padding-top:$i + $j * 0.1rem
             } 
         }
@@ -422,7 +481,7 @@ $maximum:101;
                 padding-right:#{$i} + rem
             } 
         } @else if($i < 10) {
-            .pr#{$i}0#{$j}rem{
+            .pr#{$i}-#{$j}rem{
                 padding-right:$i + $j * 0.1rem
             } 
         }
@@ -437,7 +496,7 @@ $maximum:101;
                 padding-bottom:#{$i} + rem
             } 
         } @else if($i < 10) {
-            .pb#{$i}0#{$j}rem{
+            .pb#{$i}-#{$j}rem{
                 padding-bottom:$i + $j * 0.1rem
             } 
         }
@@ -452,7 +511,7 @@ $maximum:101;
                 padding-left:#{$i} + rem
             } 
         } @else if($i < 10) {
-            .pl#{$i}0#{$j}rem{
+            .pl#{$i}-#{$j}rem{
                 padding-left:$i + $j * 0.1rem
             } 
         }
@@ -467,7 +526,7 @@ $maximum:101;
                 margin-top:#{$i} + rem
             } 
         } @else if($i < 10) {
-            .mt#{$i}0#{$j}rem{
+            .mt#{$i}-#{$j}rem{
                 margin-top:$i + $j * 0.1rem
             } 
         }
@@ -482,7 +541,7 @@ $maximum:101;
                 margin-right:#{$i} + rem
             } 
         } @else if($i < 10) {
-            .mr#{$i}0#{$j}rem{
+            .mr#{$i}-#{$j}rem{
                 margin-right:$i + $j * 0.1rem
             } 
         }
@@ -497,7 +556,7 @@ $maximum:101;
                 margin-bottom:#{$i} + rem
             } 
         } @else if($i < 10) {
-            .mb#{$i}0#{$j}rem{
+            .mb#{$i}-#{$j}rem{
                 margin-bottom:$i + $j * 0.1rem
             } 
         }
@@ -512,7 +571,7 @@ $maximum:101;
                 margin-left:#{$i} + rem
             } 
         } @else if($i < 10) {
-            .ml#{$i}0#{$j}rem{
+            .ml#{$i}-#{$j}rem{
                 margin-left:$i + $j * 0.1rem
             } 
         }
@@ -541,73 +600,52 @@ $maximum:101;
 }
 
 /* width (px) max : 1921 */
-@for $i from 0 to $maximum{
-    @if($i == 0) {
-        .w#{$i}{
-            width:$i
-        } 
-    } @else if($i < 10) {
-        .w#{$i}px{
-            width:$i + px
-        } 
-    }
+@for $i from 0 to 1921{
+    .w#{$i}px{
+        width:$i + px
+    } 
 }
 
 /* height (px) max : 1081 */
-@for $i from 0 to $maximum{
-    @if($i == 0) {
-        .h#{$i}{
-            height:$i
-        } 
-    } @else if($i < 10) {
-        .h#{$i}px{
-            height:$i + px
-        } 
-    }
+@for $i from 0 to 1081{
+    .h#{$i}px{
+        height:$i + px
+    } 
 }
 
 
 /* height (%) max : 101 */
 @for $i from 0 to $maximum{
-    @for $j from 0 to 10{
-        @if($j == 0) {
-            .h#{$i}p{
-                height:#{$i} + #{'%'}
-            } 
-        } @else if($i < 10) {
-            .h#{$i}0#{$j}p{
-                height:$i + $j * 0.1 + #{'%'}
-            } 
-        }
-    }
+    .h#{$i}p{
+        height:#{$i} + #{'%'}
+    } 
 }
 
 /* height (vh) */
 @for $i from 0 to $maximum{
-    @for $j from 0 to 10{
-        @if($j == 0) {
-            .h#{$i}vh{
-                width:#{$i} + vh
-            } 
-        } @else if($i < 10) {
-            .h#{$i}0#{$j}vh{
-                width:$i + $j * 0.1vh
-            } 
-        }
-    }
+    .h#{$i}vh{
+        height:#{$i} + vh
+    } 
+}
+
+/* height (vw) */
+@for $i from 0 to $maximum{
+    .h#{$i}vw{
+        height:#{$i} + vw
+    } 
 }
 
 /* top */
 @for $i from 0 to $maximum{
-    @if($i == 0) {
-        .t#{$i}{
-            top:$i
-        } 
-    } @else if($i < 10) {
-        .t#{$i}px{
-            top:$i + px
-        } 
-    }
+    .t#{$i}px{
+        top:$i + px
+    } 
+}
+
+@for $i from 0 to $maximum{
+    .t#{$i}p{
+        top:$i + #{'%'}
+    } 
 }
 
 @for $i from 0 to $maximum{
@@ -617,7 +655,7 @@ $maximum:101;
                 top:#{$i} + rem
             } 
         } @else if($i < 10) {
-            .t#{$i}0#{$j}rem{
+            .t#{$i}-#{$j}rem{
                 top:$i + $j * 0.1rem
             } 
         }
@@ -626,15 +664,9 @@ $maximum:101;
 
 /* right */
 @for $i from 0 to $maximum{
-    @if($i == 0) {
-        .r#{$i}{
-            right:$i
-        } 
-    } @else if($i < 10) {
-        .r#{$i}px{
-            right:$i + px
-        } 
-    }
+    .r#{$i}px{
+        right:$i + px
+    } 
 }
 
 @for $i from 0 to $maximum{
@@ -644,7 +676,7 @@ $maximum:101;
                 right:#{$i} + rem
             } 
         } @else if($i < 10) {
-            .r#{$i}0#{$j}rem{
+            .r#{$i}-#{$j}rem{
                 right:$i + $j * 0.1rem
             } 
         }
@@ -653,15 +685,9 @@ $maximum:101;
 
 /* bottom */
 @for $i from 0 to $maximum{
-    @if($i == 0) {
-        .b#{$i}{
-            bottom:$i
-        } 
-    } @else if($i < 10) {
-        .b#{$i}px{
-            bottom:$i + px
-        } 
-    }
+    .b#{$i}px{
+        bottom:$i + px
+    } 
 }
 
 @for $i from 0 to $maximum{
@@ -671,7 +697,7 @@ $maximum:101;
                 bottom:#{$i} + rem
             } 
         } @else if($i < 10) {
-            .b#{$i}0#{$j}rem{
+            .b#{$i}-#{$j}rem{
                 bottom:$i + $j * 0.1rem
             } 
         }
@@ -680,15 +706,9 @@ $maximum:101;
 
 /* left */
 @for $i from 0 to $maximum{
-    @if($i == 0) {
-        .l#{$i}{
-            left:$i
-        } 
-    } @else if($i < 10) {
-        .l#{$i}px{
-            left:$i + px
-        } 
-    }
+    .l#{$i}px{
+        left:$i + px
+    } 
 }
 
 @for $i from 0 to $maximum{
@@ -698,82 +718,101 @@ $maximum:101;
                 left:#{$i} + rem
             } 
         } @else if($i < 10) {
-            .l#{$i}0#{$j}rem{
+            .l#{$i}-#{$j}rem{
                 left:$i + $j * 0.1rem
             } 
         }
     }
 }
 
-/* 12 Columns Grid System */
-@for $i from 0 to $maximum{
-    .grid-#{$i}{
-        width:$i * calc(100/12) + #{'%'}
+/* 그리드 시스템에서 오프셋은 반드시 촤측 값만 가집니다. */
+@for $i from 0 to 11{
+    .o#{$i}{
+        opacity:$i * 0.1
     } 
 }
 
+/* 12 Columns Grid System */
+@for $i from 0 to 13{
+    @if($i == 0){
+        .grid-#{$i}{
+            width:auto;
+        } 
+    } @else {
+        .grid-#{$i}{
+            width:$i * calc(100/12) + #{'%'}
+        } 
+    }
+}
+
 /* 그리드 시스템에서 오프셋은 반드시 촤측 값만 가집니다. */
-@for $i from 0 to $maximum{
+@for $i from 0 to 13{
     .offset-#{$i}{
         margin-left:$i * calc(100/12) + #{'%'}
     } 
 }
+
+
+@for $i from 0 to 11{
+    @for $j from 0 to 10{
+        @if($j == 0) {
+            .reverse#{$i}rem{
+                margin:- #{$i} + rem;
+    
+                [class^='grid-']{
+                    padding:#{$i} + rem;
+                } 
+            }
+        } @else if($i < 10) {
+            .reverse#{$i}-#{$j}rem{
+                margin:-($i + $j * 0.1rem);
+    
+                [class^='grid-']{
+                    padding:$i + $j * 0.1rem
+                } 
+            }
+        }
+    }
+}
+
+
+
 
 /* ****************************************************************************************************************************************************************************** */
 
 
 /* [ .ul- ] Ultra Large */
 @media(max-width:1600px){
-    .ul-bnc{background:center no-repeat}.ul-bnt{background:top no-repeat}.ul-bnb{background:bottom no-repeat}.ul-bsc{background-size:cover}.ul-bsi{background-size:initial}.ul-baf{background-attachment:fixed}.ul-tar{text-align:right}.ul-tal{text-align:left}.ul-tac{text-align:center}.ul-taj{text-align:justify}.ul-fr{float:right}.ul-fl{float:left}.ul-fn{float:none}.ul-clb{clear:both}.ul-clr{clear:right}.ul-cll{clear:left}.ul-cln{clear:none}.ul-ps{position:static}.ul-pr{position:relative}.ul-pa{position:absolute}.ul-pf{position:fixed}.ul-pi{position:initial}.ul-sticky{position:sticky}.ul-db{display:block}.ul-di{display:inline-block}.ul-dn{display:none}.ul-dt{display:table}.ul-dtc{display:table-cell}.ul-vh{visibility:hidden}.ul-vv{visibility:visible}.ul-vi{visibility:initial}.ul-df{display:flex}.ul-dif{display:inline-flex}.ul-fdr{flex-direction:row}.ul-fdrr{flex-direction:row-reverse}.ul-fdc{flex-direction:column}.ul-fdcr{flex-direction:column-reverse}.ul-fwn{flex-wrap:nowrap}.ul-fw{flex-wrap:wrap}.ul-fwr{flex-wrap:wrap-reverse}.ul-jcfs{justify-content:flex-start}.ul-jcfe{justify-content:flex-end}.ul-jcc{justify-content:center}.ul-jcsb{justify-content:space-between}.ul-jcsa{justify-content:space-around}.ul-acs{align-content:stretch}.ul-acfs{align-content:flex-start}.ul-acfe{align-content:flex-end}.ul-acc{align-content:center}.ul-acsb{align-content:space-between}.ul-acsa{align-content:space-around}.ul-ais{align-items:stretch}.ul-aifs{align-items:flex-start}.ul-aife{align-items:flex-end}.ul-aic{align-items:center}.ul-aib{align-items:baseline}.ul-asa{align-self:auto}.ul-ass{align-self:stretch}.ul-asfs{align-self:flex-start}.ul-asfe{align-self:flex-end}.ul-asc{align-self:center}.ul-asb{align-self:baseline}.ul-tlf{table-layout:fixed}.ul-fsn{font-style:normal}.ul-fsi{font-style:italic}.ul-fso{font-style:oblique}.ul-fs.initial{font-style:initial}.ul-fs.inherit{font-style:inherit}.ul-wb{word-break:break-all}.ul-wsn{white-space:nowrap}.ul-wsp{white-space:pre}.ul-wspl{white-space:pre-line}.b0,.ul-bn{border:0}.ul-bt0{border-top:0}.ul-br0{border-right:0}.ul-bb0{border-bottom:0}.ul-bl0{border-left:0}.ul-vat{vertical-align:top}.ul-vam{vertical-align:middle}.ul-vab{vertical-align:bottom}.ul-oa{overflow:auto}.ul-oh{overflow:hidden}.ul-oxh{overflow-x:hidden}.ul-oyh{overflow-y:hidden}.ul-oxa{overflow-x:auto}.ul-oya{overflow-y:auto}.ul-cp{cursor:pointer}.ul-cd{cursor:default}.ul-cm{cursor:move}.ul-ct{cursor:text}.ul-cw{cursor:wait}.ul-cn{cursor:none}
-    @for $i from 2 to 10{.ul-lc#{$i}{display:-webkit-box;-webkit-line-clamp:$i;line-height:$lineClampHeight;-webkit-box-orient:vertical;overflow:hidden;text-overflow: ellipsis;}}@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {@for $i from 2 to 10{.ul-lc#{$i}{display:block;height:$i * $lineClampHeight + rem;}}}@for $i from 0 to 256{.ul-c#{$i}{color:rgb($i, $i, $i);}}@for $i from 1 to 10{.ul-fw#{$i * 100}{font-weight:$i * 100 }}@for $i from 0 to $maximum{.ul-fs#{$i}px{font-size:#{$i}+ px }}@for $i from 1 to 11{@for $j from 0 to 10{@if($j == 0) {.ul-fs#{$i}rem{font-size:#{$i}+ rem }}@else if($i < 10) {.ul-fs#{$i}0#{$j}rem{font-size:$i + $j * 0.1rem }}}}@for $i from 1 to 10{@for $j from 0 to 10{@if($j == 0) {.ul-lh#{$i}rem{line-height:#{$i}+ rem }}@else if($i < 10) {.ul-lh#{$i}0#{$j}rem{line-height:$i + $j * 0.1rem }}}}@for $i from 0 to 10{@for $j from 0 to 10{@if($j == 0) {.ul-lh#{$i}{line-height:$i }}@else if($i < 10) {.ul-lh#{$i}0#{$j}{line-height:$i + $j * 0.1 }}}}@for $i from 0 to $maximum{.ul-lh#{$i}px{line-height:#{$i}+ px }}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.ul-lh#{$i}vh{line-height:#{$i}+ vh }}@else if($i < 10) {.ul-lh#{$i}0#{$j}vh{line-height:$i + $j * 0.1vh }}}}@for $i from 0 to $maximum{@if($i == 0) {.ul-pa#{$i}{padding:0 }}@else if($i < 10) {.ul-pa#{$i}px{padding:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.ul-pt#{$i}{padding-top:0 }}@else if($i < 10) {.ul-pt#{$i}px{padding-top:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.ul-pr#{$i}{padding-right:0 }}@else if($i < 10) {.ul-pr#{$i}px{padding-right:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.ul-pb#{$i}{padding-bottom:0 }}@else if($i < 10) {.ul-pb#{$i}px{padding-bottom:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.ul-pl#{$i}{padding-left:0 }}@else if($i < 10) {.ul-pl#{$i}px{padding-left:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.ul-ma#{$i}{margin:0 }}@else if($i < 10) {.ul-ma#{$i}px{margin:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.ul-mt#{$i}{margin-top:0 }}@else if($i < 10) {.ul-mt#{$i}px{margin-top:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.ul-mr#{$i}{margin-right:0 }}@else if($i < 10) {.ul-mr#{$i}px{margin-right:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.ul-mb#{$i}{margin-bottom:0 }}@else if($i < 10) {.ul-mb#{$i}px{margin-bottom:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.ul-ml#{$i}{margin-left:0 }}@else if($i < 10) {.ul-ml#{$i}px{margin-left:#{$i}+ px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.ul-pt#{$i}rem{padding-top:#{$i}+ rem }}@else if($i < 10) {.ul-pt#{$i}0#{$j}rem{padding-top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.ul-pr#{$i}rem{padding-right:#{$i}+ rem }}@else if($i < 10) {.ul-pr#{$i}0#{$j}rem{padding-right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.ul-pb#{$i}rem{padding-bottom:#{$i}+ rem }}@else if($i < 10) {.ul-pb#{$i}0#{$j}rem{padding-bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.ul-pl#{$i}rem{padding-left:#{$i}+ rem }}@else if($i < 10) {.ul-pl#{$i}0#{$j}rem{padding-left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.ul-mt#{$i}rem{margin-top:#{$i}+ rem }}@else if($i < 10) {.ul-mt#{$i}0#{$j}rem{margin-top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.ul-mr#{$i}rem{margin-right:#{$i}+ rem }}@else if($i < 10) {.ul-mr#{$i}0#{$j}rem{margin-right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.ul-mb#{$i}rem{margin-bottom:#{$i}+ rem }}@else if($i < 10) {.ul-mb#{$i}0#{$j}rem{margin-bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.ul-ml#{$i}rem{margin-left:#{$i}+ rem }}@else if($i < 10) {.ul-ml#{$i}0#{$j}rem{margin-left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{.ul-w#{$i}p{width:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.ul-w#{$i}vw{width:#{$i}+ vw }}@for $i from 0 to $maximum{.ul-w#{$i}rem{width:#{$i}+ rem }}@for $i from 0 to $maximum{@if($i == 0) {.ul-w#{$i}{width:$i }}@else if($i < 10) {.ul-w#{$i}px{width:$i + px }}}@for $i from 0 to $maximum{@if($i == 0) {.ul-h#{$i}{height:$i }}@else if($i < 10) {.ul-h#{$i}px{height:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.ul-h#{$i}p{height:#{$i}+ #{'%'}}}@else if($i < 10) {.ul-h#{$i}0#{$j}p{height:$i + $j * 0.1 + #{'%'}}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.ul-h#{$i}vh{width:#{$i}+ vh }}@else if($i < 10) {.ul-h#{$i}0#{$j}vh{width:$i + $j * 0.1vh }}}}@for $i from 0 to $maximum{@if($i == 0) {.ul-t#{$i}{top:$i }}@else if($i < 10) {.ul-t#{$i}px{top:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.ul-t#{$i}rem{top:#{$i}+ rem }}@else if($i < 10) {.ul-t#{$i}0#{$j}rem{top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.ul-r#{$i}{right:$i }}@else if($i < 10) {.ul-r#{$i}px{right:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.ul-r#{$i}rem{right:#{$i}+ rem }}@else if($i < 10) {.ul-r#{$i}0#{$j}rem{right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.ul-b#{$i}{bottom:$i }}@else if($i < 10) {.ul-b#{$i}px{bottom:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.ul-b#{$i}rem{bottom:#{$i}+ rem }}@else if($i < 10) {.ul-b#{$i}0#{$j}rem{bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.ul-l#{$i}{left:$i }}@else if($i < 10) {.ul-l#{$i}px{left:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.ul-l#{$i}rem{left:#{$i}+ rem }}@else if($i < 10) {.ul-l#{$i}0#{$j}rem{left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{.ul-grid-#{$i}{width:$i * calc(100/12) + #{'%'}}}@for $i from 0 to $maximum{.ul-offset-#{$i}{margin-left:$i * calc(100/12) + #{'%'}}}
+    .ul-off{object-fit:fill}.ul-ofc{object-fit:cover}.ul-ofct{object-fit:contain}.ul-ofn{object-fit:none}.ul-ofsd{object-fit:scale-down}.ul-tty-50p{transform:translateY(-50%)}.ul-ttx-50p{transform:translateX(-50%)}.ul-ha{height:auto}.ul-hai{height:auto!important}.ul-lhi{line-height:initial}.ul-lhii{line-height:initial!important}.ul-ta{top:auto}.ul-ra{right:auto}.ul-ba{bottom:auto}.ul-la{left:auto}.ul-tai{top:auto!important}.ul-rai{right:auto!important}.ul-bai{bottom:auto!important}.ul-lai{left:auto!important}.ul-t0{top:0}.ul-r0{right:0}.ul-b0{bottom:0}.ul-l0{left:0}.ul-t0i{top:0!important}.ul-r0i{right:0!important}.ul-b0i{bottom:0!important}.ul-l0i{left:0!important}.ul-pa0{padding:0}.ul-pt0{padding-top:0}.ul-pr0{padding-right:0}.ul-pb0{padding-bottom:0}.ul-pl0{padding-left:0}.ul-pa0i{padding:0!important}.ul-pt0i{padding-top:0!important}.ul-pr0i{padding-right:0!important}.ul-pb0i{padding-bottom:0!important}.ul-pl0i{padding-left:0!important}.ul-ma0{margin:0}.ul-mt0{margin-top:0}.ul-mr0{margin-right:0}.ul-mb0{margin-bottom:0}.ul-ml0{margin-left:0}.ul-maai{margin:auto!important}.ul-mta{margin-top:auto}.ul-mra{margin-right:auto}.ul-mba{margin-bottom:auto}.ul-mla{margin-left:auto}.ul-ma0i{margin:0!important}.ul-mt0i{margin-top:0!important}.ul-mr0i{margin-right:0!important}.ul-mb0i{margin-bottom:0!important}.ul-ml0i{margin-left:0!important}.ul-bnc{background:no-repeat center}.ul-bnt{background:no-repeat top}.ul-bnb{background:no-repeat bottom}.ul-bsc{background-size:cover}.ul-bsi{background-size:initial}.ul-baf{background-attachment:fixed}.ul-tar{text-align:right}.ul-tal{text-align:left}.ul-tac{text-align:center}.ul-taj{text-align:justify}.ul-fr{float:right}.ul-fl{float:left}.ul-fn{float:none}.ul-clb{clear:both}.ul-clr{clear:right}.ul-cll{clear:left}.ul-cln{clear:none}.ul-ps{position:static}.ul-pr{position:relative}.ul-pa{position:absolute}.ul-pf{position:fixed}.ul-pi{position:initial}.ul-sticky{position:sticky}.ul-di{display:inline}.ul-db{display:block}.ul-dib{display:inline-block}.ul-dn{display:none}.ul-dt{display:table}.ul-dtc{display:table-cell}.ul-vh{visibility:hidden}.ul-vv{visibility:visible}.ul-vi{visibility:initial}.ul-df{display:flex}.ul-dif{display:inline-flex}.ul-fa{flex:auto}.ul-fi{flex:initial}.ul-fdr{flex-direction:row}.ul-fdrr{flex-direction:row-reverse}.ul-fdc{flex-direction:column}.ul-fdcr{flex-direction:column-reverse}.ul-fwn{flex-wrap:nowrap}.ul-fw{flex-wrap:wrap}.ul-fwr{flex-wrap:wrap-reverse}.ul-fgu{flex-grow:unset}.ul-jcfs{justify-content:flex-start}.ul-jcfe{justify-content:flex-end}.ul-jcc{justify-content:center}.ul-jcsb{justify-content:space-between}.ul-jcsa{justify-content:space-around}.ul-acs{align-content:stretch}.ul-acfs{align-content:flex-start}.ul-acfe{align-content:flex-end}.ul-acc{align-content:center}.ul-acsb{align-content:space-between}.ul-acsa{align-content:space-around}.ul-ais{align-items:stretch}.ul-aifs{align-items:flex-start}.ul-aife{align-items:flex-end}.ul-aic{align-items:center}.ul-aib{align-items:baseline}.ul-asa{align-self:auto}.ul-ass{align-self:stretch}.ul-asfs{align-self:flex-start}.ul-asfe{align-self:flex-end}.ul-asc{align-self:center}.ul-asb{align-self:baseline}.ul-fshi{flex-shrink:initial}.ul-fshu{flex-shrink:unset}.ul-tlf{table-layout:fixed}.ul-tla{table-layout:auto}.ul-fsn{font-style:normal}.ul-fsi{font-style:italic}.ul-fso{font-style:oblique}.ul-fs.initial{font-style:initial}.ul-fs.inherit{font-style:inherit}.ul-wb{word-break:break-all}.ul-wsn{white-space:nowrap}.ul-wsp{white-space:pre}.ul-wspl{white-space:pre-line}.ul-wsi{white-space:initial}.ul-b0{border:0}.ul-bn{border:0}.ul-bt0{border-top:0}.ul-br0{border-right:0}.ul-bb0{border-bottom:0}.ul-bl0{border-left:0}.ul-ba0i{border:0!important}.ul-bni{border:0!important}.ul-bt0i{border-top:0!important}.ul-br0i{border-right:0!important}.ul-bb0i{border-bottom:0!important}.ul-bl0i{border-left:0!important}.ul-vat{vertical-align:top}.ul-vam{vertical-align:middle}.ul-vab{vertical-align:bottom}.ul-vabl{vertical-align:baseline}.ul-oa{overflow:auto}.ul-oh{overflow:hidden}.ul-oxh{overflow-x:hidden}.ul-oyh{overflow-y:hidden}.ul-oxa{overflow-x:auto}.ul-oya{overflow-y:auto}.ul-cp{cursor:pointer}.ul-cd{cursor:default}.ul-cm{cursor:move}.ul-ct{cursor:text}.ul-cw{cursor:wait}.ul-cn{cursor:none}.ul-cna{cursor:not-allowed}
+     @for $i from 0 to 10{@for $j from 0 to 11{@if($j == 0){.ul-fg-#{$i}{flex-grow:#{$i}}}@else if($i < 1){.ul-fg-#{$i}#{$j}{flex-grow:$i + $j * .1}}@else if $i>1 and $i < 10{.ul-fg-#{$i}-#{$j}{flex-grow:$i + $j * .1}}}}@for $i from 0 to 11{.ul-fsh#{$i}{flex-shrink:$i}}@for $i from 2 to 10{.ul-lc#{$i}{display:-webkit-box;-webkit-line-clamp:$i;line-height:$lineClampHeight;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){@for $i from 2 to 10{.ul-lc#{$i}{display:block;height:$i * $lineClampHeight + rem}}}@for $i from 0 to 256{.ul-c#{$i}{color:rgb($i,$i,$i)}}@for $i from 1 to 10{.ul-fw#{$i * 100}{font-weight:$i * 100}}@for $i from 0 to $maximum{.ul-fs#{$i}px{font-size:#{$i}+ px}}@for $i from 1 to 11{@for $j from 0 to 10{@if($j == 0){.ul-fs#{$i}rem{font-size:#{$i}+ rem}}@else if($i < 10){.ul-fs#{$i}-#{$j}rem{font-size:$i + $j * .1rem}}}}@for $i from 1 to 10{@for $j from 0 to 10{@if($j == 0){.ul-lh#{$i}rem{line-height:#{$i}+ rem}}@else if($i < 10){.ul-lh#{$i}-#{$j}rem{line-height:$i + $j * .1rem}}}}@for $i from 0 to 10{@for $j from 0 to 10{@if($j == 0){.ul-lh#{$i}{line-height:$i}}@else if($i < 10){.ul-lh#{$i}-#{$j}{line-height:$i + $j * .1}}}}@for $i from 0 to $maximum{.ul-lh#{$i}px{line-height:#{$i}+ px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.ul-lh#{$i}vh{line-height:#{$i}+ vh}}@else if($i < 10){.ul-lh#{$i}-#{$j}vh{line-height:$i + $j * .1vh}}}}@for $i from 0 to $maximum{.ul-pa#{$i}px{padding:#{$i}+ px}}@for $i from 0 to $maximum{.ul-pt#{$i}px{padding-top:#{$i}+ px}}@for $i from 0 to $maximum{.ul-pr#{$i}px{padding-right:#{$i}+ px}}@for $i from 0 to $maximum{.ul-pb#{$i}px{padding-bottom:#{$i}+ px}}@for $i from 0 to $maximum{.ul-pl#{$i}px{padding-left:#{$i}+ px}}@for $i from 0 to $maximum{.ul-ma#{$i}px{margin:#{$i}+ px}}@for $i from 0 to $maximum{.ul-mt#{$i}px{margin-top:#{$i}+ px}}@for $i from 0 to $maximum{.ul-mr#{$i}px{margin-right:#{$i}+ px}}@for $i from 0 to $maximum{.ul-mb#{$i}px{margin-bottom:#{$i}+ px}}@for $i from 0 to $maximum{.ul-ml#{$i}px{margin-left:#{$i}+ px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.ul-pt#{$i}rem{padding-top:#{$i}+ rem}}@else if($i < 10){.ul-pt#{$i}-#{$j}rem{padding-top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.ul-pr#{$i}rem{padding-right:#{$i}+ rem}}@else if($i < 10){.ul-pr#{$i}-#{$j}rem{padding-right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.ul-pb#{$i}rem{padding-bottom:#{$i}+ rem}}@else if($i < 10){.ul-pb#{$i}-#{$j}rem{padding-bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.ul-pl#{$i}rem{padding-left:#{$i}+ rem}}@else if($i < 10){.ul-pl#{$i}-#{$j}rem{padding-left:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.ul-mt#{$i}rem{margin-top:#{$i}+ rem}}@else if($i < 10){.ul-mt#{$i}-#{$j}rem{margin-top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.ul-mr#{$i}rem{margin-right:#{$i}+ rem}}@else if($i < 10){.ul-mr#{$i}-#{$j}rem{margin-right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.ul-mb#{$i}rem{margin-bottom:#{$i}+ rem}}@else if($i < 10){.ul-mb#{$i}-#{$j}rem{margin-bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.ul-ml#{$i}rem{margin-left:#{$i}+ rem}}@else if($i < 10){.ul-ml#{$i}-#{$j}rem{margin-left:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.ul-w#{$i}p{width:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.ul-w#{$i}vw{width:#{$i}+ vw}}@for $i from 0 to $maximum{.ul-w#{$i}rem{width:#{$i}+ rem}}@for $i from 0 to 1921{.ul-w#{$i}px{width:$i + px}}@for $i from 0 to 1081{.ul-h#{$i}px{height:$i + px}}@for $i from 0 to $maximum{.ul-h#{$i}p{height:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.ul-h#{$i}vh{height:#{$i}+ vh}}@for $i from 0 to $maximum{.ul-h#{$i}vw{height:#{$i}+ vw}}@for $i from 0 to $maximum{.ul-t#{$i}px{top:$i + px}}@for $i from 0 to $maximum{.ul-t#{$i}p{top:$i + #{'%'}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.ul-t#{$i}rem{top:#{$i}+ rem}}@else if($i < 10){.ul-t#{$i}-#{$j}rem{top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.ul-r#{$i}px{right:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.ul-r#{$i}rem{right:#{$i}+ rem}}@else if($i < 10){.ul-r#{$i}-#{$j}rem{right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.ul-b#{$i}px{bottom:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.ul-b#{$i}rem{bottom:#{$i}+ rem}}@else if($i < 10){.ul-b#{$i}-#{$j}rem{bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.ul-l#{$i}px{left:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.ul-l#{$i}rem{left:#{$i}+ rem}}@else if($i < 10){.ul-l#{$i}-#{$j}rem{left:$i + $j * .1rem}}}}@for $i from 0 to 11{.ul-o#{$i}{opacity:$i * .1}}@for $i from 0 to 13{@if($i == 0){.ul-grid-#{$i}{width:auto}}@else{.ul-grid-#{$i}{width:$i * calc(100/12) + #{'%'}}}}@for $i from 0 to 13{.ul-offset-#{$i}{margin-left:$i * calc(100/12) + #{'%'}}}@for $i from 0 to 11{@for $j from 0 to 10{@if($j == 0){.ul-reverse#{$i}rem{margin:- #{$i}+ rem;[class^='grid-']{padding:#{$i}+ rem}}}@else if($i < 10){.ul-reverse#{$i}-#{$j}rem{margin:-($i + $j * .1rem);[class^='grid-']{padding:$i + $j * .1rem}}}}}
 }
 /* [ .el- ] Extra Large */
 @media(max-width:1400px){
-    .el-bnc{background:center no-repeat}.el-bnt{background:top no-repeat}.el-bnb{background:bottom no-repeat}.el-bsc{background-size:cover}.el-bsi{background-size:initial}.el-baf{background-attachment:fixed}.el-tar{text-align:right}.el-tal{text-align:left}.el-tac{text-align:center}.el-taj{text-align:justify}.el-fr{float:right}.el-fl{float:left}.el-fn{float:none}.el-clb{clear:both}.el-clr{clear:right}.el-cll{clear:left}.el-cln{clear:none}.el-ps{position:static}.el-pr{position:relative}.el-pa{position:absolute}.el-pf{position:fixed}.el-pi{position:initial}.el-sticky{position:sticky}.el-db{display:block}.el-di{display:inline-block}.el-dn{display:none}.el-dt{display:table}.el-dtc{display:table-cell}.el-vh{visibility:hidden}.el-vv{visibility:visible}.el-vi{visibility:initial}.el-df{display:flex}.el-dif{display:inline-flex}.el-fdr{flex-direction:row}.el-fdrr{flex-direction:row-reverse}.el-fdc{flex-direction:column}.el-fdcr{flex-direction:column-reverse}.el-fwn{flex-wrap:nowrap}.el-fw{flex-wrap:wrap}.el-fwr{flex-wrap:wrap-reverse}.el-jcfs{justify-content:flex-start}.el-jcfe{justify-content:flex-end}.el-jcc{justify-content:center}.el-jcsb{justify-content:space-between}.el-jcsa{justify-content:space-around}.el-acs{align-content:stretch}.el-acfs{align-content:flex-start}.el-acfe{align-content:flex-end}.el-acc{align-content:center}.el-acsb{align-content:space-between}.el-acsa{align-content:space-around}.el-ais{align-items:stretch}.el-aifs{align-items:flex-start}.el-aife{align-items:flex-end}.el-aic{align-items:center}.el-aib{align-items:baseline}.el-asa{align-self:auto}.el-ass{align-self:stretch}.el-asfs{align-self:flex-start}.el-asfe{align-self:flex-end}.el-asc{align-self:center}.el-asb{align-self:baseline}.el-tlf{table-layout:fixed}.el-fsn{font-style:normal}.el-fsi{font-style:italic}.el-fso{font-style:oblique}.el-fs.initial{font-style:initial}.el-fs.inherit{font-style:inherit}.el-wb{word-break:break-all}.el-wsn{white-space:nowrap}.el-wsp{white-space:pre}.el-wspl{white-space:pre-line}.b0,.el-bn{border:0}.el-bt0{border-top:0}.el-br0{border-right:0}.el-bb0{border-bottom:0}.el-bl0{border-left:0}.el-vat{vertical-align:top}.el-vam{vertical-align:middle}.el-vab{vertical-align:bottom}.el-oa{overflow:auto}.el-oh{overflow:hidden}.el-oxh{overflow-x:hidden}.el-oyh{overflow-y:hidden}.el-oxa{overflow-x:auto}.el-oya{overflow-y:auto}.el-cp{cursor:pointer}.el-cd{cursor:default}.el-cm{cursor:move}.el-ct{cursor:text}.el-cw{cursor:wait}.el-cn{cursor:none}
-    @for $i from 2 to 10{.el-lc#{$i}{display:-webkit-box;-webkit-line-clamp:$i;line-height:$lineClampHeight;-webkit-box-orient:vertical;overflow:hidden;text-overflow: ellipsis;}}@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {@for $i from 2 to 10{.el-lc#{$i}{display:block;height:$i * $lineClampHeight + rem;}}}@for $i from 0 to 256{.el-c#{$i}{color:rgb($i, $i, $i);}}@for $i from 1 to 10{.el-fw#{$i * 100}{font-weight:$i * 100 }}@for $i from 0 to $maximum{.el-fs#{$i}px{font-size:#{$i}+ px }}@for $i from 1 to 11{@for $j from 0 to 10{@if($j == 0) {.el-fs#{$i}rem{font-size:#{$i}+ rem }}@else if($i < 10) {.el-fs#{$i}0#{$j}rem{font-size:$i + $j * 0.1rem }}}}@for $i from 1 to 10{@for $j from 0 to 10{@if($j == 0) {.el-lh#{$i}rem{line-height:#{$i}+ rem }}@else if($i < 10) {.el-lh#{$i}0#{$j}rem{line-height:$i + $j * 0.1rem }}}}@for $i from 0 to 10{@for $j from 0 to 10{@if($j == 0) {.el-lh#{$i}{line-height:$i }}@else if($i < 10) {.el-lh#{$i}0#{$j}{line-height:$i + $j * 0.1 }}}}@for $i from 0 to $maximum{.el-lh#{$i}px{line-height:#{$i}+ px }}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.el-lh#{$i}vh{line-height:#{$i}+ vh }}@else if($i < 10) {.el-lh#{$i}0#{$j}vh{line-height:$i + $j * 0.1vh }}}}@for $i from 0 to $maximum{@if($i == 0) {.el-pa#{$i}{padding:0 }}@else if($i < 10) {.el-pa#{$i}px{padding:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.el-pt#{$i}{padding-top:0 }}@else if($i < 10) {.el-pt#{$i}px{padding-top:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.el-pr#{$i}{padding-right:0 }}@else if($i < 10) {.el-pr#{$i}px{padding-right:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.el-pb#{$i}{padding-bottom:0 }}@else if($i < 10) {.el-pb#{$i}px{padding-bottom:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.el-pl#{$i}{padding-left:0 }}@else if($i < 10) {.el-pl#{$i}px{padding-left:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.el-ma#{$i}{margin:0 }}@else if($i < 10) {.el-ma#{$i}px{margin:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.el-mt#{$i}{margin-top:0 }}@else if($i < 10) {.el-mt#{$i}px{margin-top:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.el-mr#{$i}{margin-right:0 }}@else if($i < 10) {.el-mr#{$i}px{margin-right:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.el-mb#{$i}{margin-bottom:0 }}@else if($i < 10) {.el-mb#{$i}px{margin-bottom:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.el-ml#{$i}{margin-left:0 }}@else if($i < 10) {.el-ml#{$i}px{margin-left:#{$i}+ px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.el-pt#{$i}rem{padding-top:#{$i}+ rem }}@else if($i < 10) {.el-pt#{$i}0#{$j}rem{padding-top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.el-pr#{$i}rem{padding-right:#{$i}+ rem }}@else if($i < 10) {.el-pr#{$i}0#{$j}rem{padding-right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.el-pb#{$i}rem{padding-bottom:#{$i}+ rem }}@else if($i < 10) {.el-pb#{$i}0#{$j}rem{padding-bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.el-pl#{$i}rem{padding-left:#{$i}+ rem }}@else if($i < 10) {.el-pl#{$i}0#{$j}rem{padding-left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.el-mt#{$i}rem{margin-top:#{$i}+ rem }}@else if($i < 10) {.el-mt#{$i}0#{$j}rem{margin-top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.el-mr#{$i}rem{margin-right:#{$i}+ rem }}@else if($i < 10) {.el-mr#{$i}0#{$j}rem{margin-right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.el-mb#{$i}rem{margin-bottom:#{$i}+ rem }}@else if($i < 10) {.el-mb#{$i}0#{$j}rem{margin-bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.el-ml#{$i}rem{margin-left:#{$i}+ rem }}@else if($i < 10) {.el-ml#{$i}0#{$j}rem{margin-left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{.el-w#{$i}p{width:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.el-w#{$i}vw{width:#{$i}+ vw }}@for $i from 0 to $maximum{.el-w#{$i}rem{width:#{$i}+ rem }}@for $i from 0 to $maximum{@if($i == 0) {.el-w#{$i}{width:$i }}@else if($i < 10) {.el-w#{$i}px{width:$i + px }}}@for $i from 0 to $maximum{@if($i == 0) {.el-h#{$i}{height:$i }}@else if($i < 10) {.el-h#{$i}px{height:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.el-h#{$i}p{height:#{$i}+ #{'%'}}}@else if($i < 10) {.el-h#{$i}0#{$j}p{height:$i + $j * 0.1 + #{'%'}}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.el-h#{$i}vh{width:#{$i}+ vh }}@else if($i < 10) {.el-h#{$i}0#{$j}vh{width:$i + $j * 0.1vh }}}}@for $i from 0 to $maximum{@if($i == 0) {.el-t#{$i}{top:$i }}@else if($i < 10) {.el-t#{$i}px{top:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.el-t#{$i}rem{top:#{$i}+ rem }}@else if($i < 10) {.el-t#{$i}0#{$j}rem{top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.el-r#{$i}{right:$i }}@else if($i < 10) {.el-r#{$i}px{right:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.el-r#{$i}rem{right:#{$i}+ rem }}@else if($i < 10) {.el-r#{$i}0#{$j}rem{right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.el-b#{$i}{bottom:$i }}@else if($i < 10) {.el-b#{$i}px{bottom:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.el-b#{$i}rem{bottom:#{$i}+ rem }}@else if($i < 10) {.el-b#{$i}0#{$j}rem{bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.el-l#{$i}{left:$i }}@else if($i < 10) {.el-l#{$i}px{left:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.el-l#{$i}rem{left:#{$i}+ rem }}@else if($i < 10) {.el-l#{$i}0#{$j}rem{left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{.el-grid-#{$i}{width:$i * calc(100/12) + #{'%'}}}@for $i from 0 to $maximum{.el-offset-#{$i}{margin-left:$i * calc(100/12) + #{'%'}}}
+    .el-off{object-fit:fill}.el-ofc{object-fit:cover}.el-ofct{object-fit:contain}.el-ofn{object-fit:none}.el-ofsd{object-fit:scale-down}.el-tty-50p{transform:translateY(-50%)}.el-ttx-50p{transform:translateX(-50%)}.el-ha{height:auto}.el-hai{height:auto!important}.el-lhi{line-height:initial}.el-lhii{line-height:initial!important}.el-ta{top:auto}.el-ra{right:auto}.el-ba{bottom:auto}.el-la{left:auto}.el-tai{top:auto!important}.el-rai{right:auto!important}.el-bai{bottom:auto!important}.el-lai{left:auto!important}.el-t0{top:0}.el-r0{right:0}.el-b0{bottom:0}.el-l0{left:0}.el-t0i{top:0!important}.el-r0i{right:0!important}.el-b0i{bottom:0!important}.el-l0i{left:0!important}.el-pa0{padding:0}.el-pt0{padding-top:0}.el-pr0{padding-right:0}.el-pb0{padding-bottom:0}.el-pl0{padding-left:0}.el-pa0i{padding:0!important}.el-pt0i{padding-top:0!important}.el-pr0i{padding-right:0!important}.el-pb0i{padding-bottom:0!important}.el-pl0i{padding-left:0!important}.el-ma0{margin:0}.el-mt0{margin-top:0}.el-mr0{margin-right:0}.el-mb0{margin-bottom:0}.el-ml0{margin-left:0}.el-maai{margin:auto!important}.el-mta{margin-top:auto}.el-mra{margin-right:auto}.el-mba{margin-bottom:auto}.el-mla{margin-left:auto}.el-ma0i{margin:0!important}.el-mt0i{margin-top:0!important}.el-mr0i{margin-right:0!important}.el-mb0i{margin-bottom:0!important}.el-ml0i{margin-left:0!important}.el-bnc{background:no-repeat center}.el-bnt{background:no-repeat top}.el-bnb{background:no-repeat bottom}.el-bsc{background-size:cover}.el-bsi{background-size:initial}.el-baf{background-attachment:fixed}.el-tar{text-align:right}.el-tal{text-align:left}.el-tac{text-align:center}.el-taj{text-align:justify}.el-fr{float:right}.el-fl{float:left}.el-fn{float:none}.el-clb{clear:both}.el-clr{clear:right}.el-cll{clear:left}.el-cln{clear:none}.el-ps{position:static}.el-pr{position:relative}.el-pa{position:absolute}.el-pf{position:fixed}.el-pi{position:initial}.el-sticky{position:sticky}.el-di{display:inline}.el-db{display:block}.el-dib{display:inline-block}.el-dn{display:none}.el-dt{display:table}.el-dtc{display:table-cell}.el-vh{visibility:hidden}.el-vv{visibility:visible}.el-vi{visibility:initial}.el-df{display:flex}.el-dif{display:inline-flex}.el-fa{flex:auto}.el-fi{flex:initial}.el-fdr{flex-direction:row}.el-fdrr{flex-direction:row-reverse}.el-fdc{flex-direction:column}.el-fdcr{flex-direction:column-reverse}.el-fwn{flex-wrap:nowrap}.el-fw{flex-wrap:wrap}.el-fwr{flex-wrap:wrap-reverse}.el-fgu{flex-grow:unset}.el-jcfs{justify-content:flex-start}.el-jcfe{justify-content:flex-end}.el-jcc{justify-content:center}.el-jcsb{justify-content:space-between}.el-jcsa{justify-content:space-around}.el-acs{align-content:stretch}.el-acfs{align-content:flex-start}.el-acfe{align-content:flex-end}.el-acc{align-content:center}.el-acsb{align-content:space-between}.el-acsa{align-content:space-around}.el-ais{align-items:stretch}.el-aifs{align-items:flex-start}.el-aife{align-items:flex-end}.el-aic{align-items:center}.el-aib{align-items:baseline}.el-asa{align-self:auto}.el-ass{align-self:stretch}.el-asfs{align-self:flex-start}.el-asfe{align-self:flex-end}.el-asc{align-self:center}.el-asb{align-self:baseline}.el-fshi{flex-shrink:initial}.el-fshu{flex-shrink:unset}.el-tlf{table-layout:fixed}.el-tla{table-layout:auto}.el-fsn{font-style:normal}.el-fsi{font-style:italic}.el-fso{font-style:oblique}.el-fs.initial{font-style:initial}.el-fs.inherit{font-style:inherit}.el-wb{word-break:break-all}.el-wsn{white-space:nowrap}.el-wsp{white-space:pre}.el-wspl{white-space:pre-line}.el-wsi{white-space:initial}.el-b0{border:0}.el-bn{border:0}.el-bt0{border-top:0}.el-br0{border-right:0}.el-bb0{border-bottom:0}.el-bl0{border-left:0}.el-ba0i{border:0!important}.el-bni{border:0!important}.el-bt0i{border-top:0!important}.el-br0i{border-right:0!important}.el-bb0i{border-bottom:0!important}.el-bl0i{border-left:0!important}.el-vat{vertical-align:top}.el-vam{vertical-align:middle}.el-vab{vertical-align:bottom}.el-vabl{vertical-align:baseline}.el-oa{overflow:auto}.el-oh{overflow:hidden}.el-oxh{overflow-x:hidden}.el-oyh{overflow-y:hidden}.el-oxa{overflow-x:auto}.el-oya{overflow-y:auto}.el-cp{cursor:pointer}.el-cd{cursor:default}.el-cm{cursor:move}.el-ct{cursor:text}.el-cw{cursor:wait}.el-cn{cursor:none}.el-cna{cursor:not-allowed}
+     @for $i from 0 to 10{@for $j from 0 to 11{@if($j == 0){.el-fg-#{$i}{flex-grow:#{$i}}}@else if($i < 1){.el-fg-#{$i}#{$j}{flex-grow:$i + $j * .1}}@else if $i>1 and $i < 10{.el-fg-#{$i}-#{$j}{flex-grow:$i + $j * .1}}}}@for $i from 0 to 11{.el-fsh#{$i}{flex-shrink:$i}}@for $i from 2 to 10{.el-lc#{$i}{display:-webkit-box;-webkit-line-clamp:$i;line-height:$lineClampHeight;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){@for $i from 2 to 10{.el-lc#{$i}{display:block;height:$i * $lineClampHeight + rem}}}@for $i from 0 to 256{.el-c#{$i}{color:rgb($i,$i,$i)}}@for $i from 1 to 10{.el-fw#{$i * 100}{font-weight:$i * 100}}@for $i from 0 to $maximum{.el-fs#{$i}px{font-size:#{$i}+ px}}@for $i from 1 to 11{@for $j from 0 to 10{@if($j == 0){.el-fs#{$i}rem{font-size:#{$i}+ rem}}@else if($i < 10){.el-fs#{$i}-#{$j}rem{font-size:$i + $j * .1rem}}}}@for $i from 1 to 10{@for $j from 0 to 10{@if($j == 0){.el-lh#{$i}rem{line-height:#{$i}+ rem}}@else if($i < 10){.el-lh#{$i}-#{$j}rem{line-height:$i + $j * .1rem}}}}@for $i from 0 to 10{@for $j from 0 to 10{@if($j == 0){.el-lh#{$i}{line-height:$i}}@else if($i < 10){.el-lh#{$i}-#{$j}{line-height:$i + $j * .1}}}}@for $i from 0 to $maximum{.el-lh#{$i}px{line-height:#{$i}+ px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.el-lh#{$i}vh{line-height:#{$i}+ vh}}@else if($i < 10){.el-lh#{$i}-#{$j}vh{line-height:$i + $j * .1vh}}}}@for $i from 0 to $maximum{.el-pa#{$i}px{padding:#{$i}+ px}}@for $i from 0 to $maximum{.el-pt#{$i}px{padding-top:#{$i}+ px}}@for $i from 0 to $maximum{.el-pr#{$i}px{padding-right:#{$i}+ px}}@for $i from 0 to $maximum{.el-pb#{$i}px{padding-bottom:#{$i}+ px}}@for $i from 0 to $maximum{.el-pl#{$i}px{padding-left:#{$i}+ px}}@for $i from 0 to $maximum{.el-ma#{$i}px{margin:#{$i}+ px}}@for $i from 0 to $maximum{.el-mt#{$i}px{margin-top:#{$i}+ px}}@for $i from 0 to $maximum{.el-mr#{$i}px{margin-right:#{$i}+ px}}@for $i from 0 to $maximum{.el-mb#{$i}px{margin-bottom:#{$i}+ px}}@for $i from 0 to $maximum{.el-ml#{$i}px{margin-left:#{$i}+ px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.el-pt#{$i}rem{padding-top:#{$i}+ rem}}@else if($i < 10){.el-pt#{$i}-#{$j}rem{padding-top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.el-pr#{$i}rem{padding-right:#{$i}+ rem}}@else if($i < 10){.el-pr#{$i}-#{$j}rem{padding-right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.el-pb#{$i}rem{padding-bottom:#{$i}+ rem}}@else if($i < 10){.el-pb#{$i}-#{$j}rem{padding-bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.el-pl#{$i}rem{padding-left:#{$i}+ rem}}@else if($i < 10){.el-pl#{$i}-#{$j}rem{padding-left:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.el-mt#{$i}rem{margin-top:#{$i}+ rem}}@else if($i < 10){.el-mt#{$i}-#{$j}rem{margin-top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.el-mr#{$i}rem{margin-right:#{$i}+ rem}}@else if($i < 10){.el-mr#{$i}-#{$j}rem{margin-right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.el-mb#{$i}rem{margin-bottom:#{$i}+ rem}}@else if($i < 10){.el-mb#{$i}-#{$j}rem{margin-bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.el-ml#{$i}rem{margin-left:#{$i}+ rem}}@else if($i < 10){.el-ml#{$i}-#{$j}rem{margin-left:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.el-w#{$i}p{width:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.el-w#{$i}vw{width:#{$i}+ vw}}@for $i from 0 to $maximum{.el-w#{$i}rem{width:#{$i}+ rem}}@for $i from 0 to 1921{.el-w#{$i}px{width:$i + px}}@for $i from 0 to 1081{.el-h#{$i}px{height:$i + px}}@for $i from 0 to $maximum{.el-h#{$i}p{height:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.el-h#{$i}vh{height:#{$i}+ vh}}@for $i from 0 to $maximum{.el-h#{$i}vw{height:#{$i}+ vw}}@for $i from 0 to $maximum{.el-t#{$i}px{top:$i + px}}@for $i from 0 to $maximum{.el-t#{$i}p{top:$i + #{'%'}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.el-t#{$i}rem{top:#{$i}+ rem}}@else if($i < 10){.el-t#{$i}-#{$j}rem{top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.el-r#{$i}px{right:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.el-r#{$i}rem{right:#{$i}+ rem}}@else if($i < 10){.el-r#{$i}-#{$j}rem{right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.el-b#{$i}px{bottom:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.el-b#{$i}rem{bottom:#{$i}+ rem}}@else if($i < 10){.el-b#{$i}-#{$j}rem{bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.el-l#{$i}px{left:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.el-l#{$i}rem{left:#{$i}+ rem}}@else if($i < 10){.el-l#{$i}-#{$j}rem{left:$i + $j * .1rem}}}}@for $i from 0 to 11{.el-o#{$i}{opacity:$i * .1}}@for $i from 0 to 13{@if($i == 0){.el-grid-#{$i}{width:auto}}@else{.el-grid-#{$i}{width:$i * calc(100/12) + #{'%'}}}}@for $i from 0 to 13{.el-offset-#{$i}{margin-left:$i * calc(100/12) + #{'%'}}}@for $i from 0 to 11{@for $j from 0 to 10{@if($j == 0){.el-reverse#{$i}rem{margin:- #{$i}+ rem;[class^='grid-']{padding:#{$i}+ rem}}}@else if($i < 10){.el-reverse#{$i}-#{$j}rem{margin:-($i + $j * .1rem);[class^='grid-']{padding:$i + $j * .1rem}}}}}
 }
 /* [ .lg- ] Large */
 @media(max-width:1280px){
-    .lg-bnc{background:center no-repeat}.lg-bnt{background:top no-repeat}.lg-bnb{background:bottom no-repeat}.lg-bsc{background-size:cover}.lg-bsi{background-size:initial}.lg-baf{background-attachment:fixed}.lg-tar{text-align:right}.lg-tal{text-align:left}.lg-tac{text-align:center}.lg-taj{text-align:justify}.lg-fr{float:right}.lg-fl{float:left}.lg-fn{float:none}.lg-clb{clear:both}.lg-clr{clear:right}.lg-cll{clear:left}.lg-cln{clear:none}.lg-ps{position:static}.lg-pr{position:relative}.lg-pa{position:absolute}.lg-pf{position:fixed}.lg-pi{position:initial}.lg-sticky{position:sticky}.lg-db{display:block}.lg-di{display:inline-block}.lg-dn{display:none}.lg-dt{display:table}.lg-dtc{display:table-cell}.lg-vh{visibility:hidden}.lg-vv{visibility:visible}.lg-vi{visibility:initial}.lg-df{display:flex}.lg-dif{display:inline-flex}.lg-fdr{flex-direction:row}.lg-fdrr{flex-direction:row-reverse}.lg-fdc{flex-direction:column}.lg-fdcr{flex-direction:column-reverse}.lg-fwn{flex-wrap:nowrap}.lg-fw{flex-wrap:wrap}.lg-fwr{flex-wrap:wrap-reverse}.lg-jcfs{justify-content:flex-start}.lg-jcfe{justify-content:flex-end}.lg-jcc{justify-content:center}.lg-jcsb{justify-content:space-between}.lg-jcsa{justify-content:space-around}.lg-acs{align-content:stretch}.lg-acfs{align-content:flex-start}.lg-acfe{align-content:flex-end}.lg-acc{align-content:center}.lg-acsb{align-content:space-between}.lg-acsa{align-content:space-around}.lg-ais{align-items:stretch}.lg-aifs{align-items:flex-start}.lg-aife{align-items:flex-end}.lg-aic{align-items:center}.lg-aib{align-items:baseline}.lg-asa{align-self:auto}.lg-ass{align-self:stretch}.lg-asfs{align-self:flex-start}.lg-asfe{align-self:flex-end}.lg-asc{align-self:center}.lg-asb{align-self:baseline}.lg-tlf{table-layout:fixed}.lg-fsn{font-style:normal}.lg-fsi{font-style:italic}.lg-fso{font-style:oblique}.lg-fs.initial{font-style:initial}.lg-fs.inherit{font-style:inherit}.lg-wb{word-break:break-all}.lg-wsn{white-space:nowrap}.lg-wsp{white-space:pre}.lg-wspl{white-space:pre-line}.b0,.lg-bn{border:0}.lg-bt0{border-top:0}.lg-br0{border-right:0}.lg-bb0{border-bottom:0}.lg-bl0{border-left:0}.lg-vat{vertical-align:top}.lg-vam{vertical-align:middle}.lg-vab{vertical-align:bottom}.lg-oa{overflow:auto}.lg-oh{overflow:hidden}.lg-oxh{overflow-x:hidden}.lg-oyh{overflow-y:hidden}.lg-oxa{overflow-x:auto}.lg-oya{overflow-y:auto}.lg-cp{cursor:pointer}.lg-cd{cursor:default}.lg-cm{cursor:move}.lg-ct{cursor:text}.lg-cw{cursor:wait}.lg-cn{cursor:none}
-    @for $i from 2 to 10{.lg-lc#{$i}{display:-webkit-box;-webkit-line-clamp:$i;line-height:$lineClampHeight;-webkit-box-orient:vertical;overflow:hidden;text-overflow: ellipsis;}}@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {@for $i from 2 to 10{.lg-lc#{$i}{display:block;height:$i * $lineClampHeight + rem;}}}@for $i from 0 to 256{.lg-c#{$i}{color:rgb($i, $i, $i);}}@for $i from 1 to 10{.lg-fw#{$i * 100}{font-weight:$i * 100 }}@for $i from 0 to $maximum{.lg-fs#{$i}px{font-size:#{$i}+ px }}@for $i from 1 to 11{@for $j from 0 to 10{@if($j == 0) {.lg-fs#{$i}rem{font-size:#{$i}+ rem }}@else if($i < 10) {.lg-fs#{$i}0#{$j}rem{font-size:$i + $j * 0.1rem }}}}@for $i from 1 to 10{@for $j from 0 to 10{@if($j == 0) {.lg-lh#{$i}rem{line-height:#{$i}+ rem }}@else if($i < 10) {.lg-lh#{$i}0#{$j}rem{line-height:$i + $j * 0.1rem }}}}@for $i from 0 to 10{@for $j from 0 to 10{@if($j == 0) {.lg-lh#{$i}{line-height:$i }}@else if($i < 10) {.lg-lh#{$i}0#{$j}{line-height:$i + $j * 0.1 }}}}@for $i from 0 to $maximum{.lg-lh#{$i}px{line-height:#{$i}+ px }}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.lg-lh#{$i}vh{line-height:#{$i}+ vh }}@else if($i < 10) {.lg-lh#{$i}0#{$j}vh{line-height:$i + $j * 0.1vh }}}}@for $i from 0 to $maximum{@if($i == 0) {.lg-pa#{$i}{padding:0 }}@else if($i < 10) {.lg-pa#{$i}px{padding:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.lg-pt#{$i}{padding-top:0 }}@else if($i < 10) {.lg-pt#{$i}px{padding-top:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.lg-pr#{$i}{padding-right:0 }}@else if($i < 10) {.lg-pr#{$i}px{padding-right:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.lg-pb#{$i}{padding-bottom:0 }}@else if($i < 10) {.lg-pb#{$i}px{padding-bottom:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.lg-pl#{$i}{padding-left:0 }}@else if($i < 10) {.lg-pl#{$i}px{padding-left:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.lg-ma#{$i}{margin:0 }}@else if($i < 10) {.lg-ma#{$i}px{margin:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.lg-mt#{$i}{margin-top:0 }}@else if($i < 10) {.lg-mt#{$i}px{margin-top:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.lg-mr#{$i}{margin-right:0 }}@else if($i < 10) {.lg-mr#{$i}px{margin-right:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.lg-mb#{$i}{margin-bottom:0 }}@else if($i < 10) {.lg-mb#{$i}px{margin-bottom:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.lg-ml#{$i}{margin-left:0 }}@else if($i < 10) {.lg-ml#{$i}px{margin-left:#{$i}+ px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.lg-pt#{$i}rem{padding-top:#{$i}+ rem }}@else if($i < 10) {.lg-pt#{$i}0#{$j}rem{padding-top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.lg-pr#{$i}rem{padding-right:#{$i}+ rem }}@else if($i < 10) {.lg-pr#{$i}0#{$j}rem{padding-right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.lg-pb#{$i}rem{padding-bottom:#{$i}+ rem }}@else if($i < 10) {.lg-pb#{$i}0#{$j}rem{padding-bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.lg-pl#{$i}rem{padding-left:#{$i}+ rem }}@else if($i < 10) {.lg-pl#{$i}0#{$j}rem{padding-left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.lg-mt#{$i}rem{margin-top:#{$i}+ rem }}@else if($i < 10) {.lg-mt#{$i}0#{$j}rem{margin-top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.lg-mr#{$i}rem{margin-right:#{$i}+ rem }}@else if($i < 10) {.lg-mr#{$i}0#{$j}rem{margin-right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.lg-mb#{$i}rem{margin-bottom:#{$i}+ rem }}@else if($i < 10) {.lg-mb#{$i}0#{$j}rem{margin-bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.lg-ml#{$i}rem{margin-left:#{$i}+ rem }}@else if($i < 10) {.lg-ml#{$i}0#{$j}rem{margin-left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{.lg-w#{$i}p{width:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.lg-w#{$i}vw{width:#{$i}+ vw }}@for $i from 0 to $maximum{.lg-w#{$i}rem{width:#{$i}+ rem }}@for $i from 0 to $maximum{@if($i == 0) {.lg-w#{$i}{width:$i }}@else if($i < 10) {.lg-w#{$i}px{width:$i + px }}}@for $i from 0 to $maximum{@if($i == 0) {.lg-h#{$i}{height:$i }}@else if($i < 10) {.lg-h#{$i}px{height:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.lg-h#{$i}p{height:#{$i}+ #{'%'}}}@else if($i < 10) {.lg-h#{$i}0#{$j}p{height:$i + $j * 0.1 + #{'%'}}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.lg-h#{$i}vh{width:#{$i}+ vh }}@else if($i < 10) {.lg-h#{$i}0#{$j}vh{width:$i + $j * 0.1vh }}}}@for $i from 0 to $maximum{@if($i == 0) {.lg-t#{$i}{top:$i }}@else if($i < 10) {.lg-t#{$i}px{top:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.lg-t#{$i}rem{top:#{$i}+ rem }}@else if($i < 10) {.lg-t#{$i}0#{$j}rem{top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.lg-r#{$i}{right:$i }}@else if($i < 10) {.lg-r#{$i}px{right:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.lg-r#{$i}rem{right:#{$i}+ rem }}@else if($i < 10) {.lg-r#{$i}0#{$j}rem{right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.lg-b#{$i}{bottom:$i }}@else if($i < 10) {.lg-b#{$i}px{bottom:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.lg-b#{$i}rem{bottom:#{$i}+ rem }}@else if($i < 10) {.lg-b#{$i}0#{$j}rem{bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.lg-l#{$i}{left:$i }}@else if($i < 10) {.lg-l#{$i}px{left:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.lg-l#{$i}rem{left:#{$i}+ rem }}@else if($i < 10) {.lg-l#{$i}0#{$j}rem{left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{.lg-grid-#{$i}{width:$i * calc(100/12) + #{'%'}}}@for $i from 0 to $maximum{.lg-offset-#{$i}{margin-left:$i * calc(100/12) + #{'%'}}}
+    .lg-off{object-fit:fill}.lg-ofc{object-fit:cover}.lg-ofct{object-fit:contain}.lg-ofn{object-fit:none}.lg-ofsd{object-fit:scale-down}.lg-tty-50p{transform:translateY(-50%)}.lg-ttx-50p{transform:translateX(-50%)}.lg-ha{height:auto}.lg-hai{height:auto!important}.lg-lhi{line-height:initial}.lg-lhii{line-height:initial!important}.lg-ta{top:auto}.lg-ra{right:auto}.lg-ba{bottom:auto}.lg-la{left:auto}.lg-tai{top:auto!important}.lg-rai{right:auto!important}.lg-bai{bottom:auto!important}.lg-lai{left:auto!important}.lg-t0{top:0}.lg-r0{right:0}.lg-b0{bottom:0}.lg-l0{left:0}.lg-t0i{top:0!important}.lg-r0i{right:0!important}.lg-b0i{bottom:0!important}.lg-l0i{left:0!important}.lg-pa0{padding:0}.lg-pt0{padding-top:0}.lg-pr0{padding-right:0}.lg-pb0{padding-bottom:0}.lg-pl0{padding-left:0}.lg-pa0i{padding:0!important}.lg-pt0i{padding-top:0!important}.lg-pr0i{padding-right:0!important}.lg-pb0i{padding-bottom:0!important}.lg-pl0i{padding-left:0!important}.lg-ma0{margin:0}.lg-mt0{margin-top:0}.lg-mr0{margin-right:0}.lg-mb0{margin-bottom:0}.lg-ml0{margin-left:0}.lg-maai{margin:auto!important}.lg-mta{margin-top:auto}.lg-mra{margin-right:auto}.lg-mba{margin-bottom:auto}.lg-mla{margin-left:auto}.lg-ma0i{margin:0!important}.lg-mt0i{margin-top:0!important}.lg-mr0i{margin-right:0!important}.lg-mb0i{margin-bottom:0!important}.lg-ml0i{margin-left:0!important}.lg-bnc{background:no-repeat center}.lg-bnt{background:no-repeat top}.lg-bnb{background:no-repeat bottom}.lg-bsc{background-size:cover}.lg-bsi{background-size:initial}.lg-baf{background-attachment:fixed}.lg-tar{text-align:right}.lg-tal{text-align:left}.lg-tac{text-align:center}.lg-taj{text-align:justify}.lg-fr{float:right}.lg-fl{float:left}.lg-fn{float:none}.lg-clb{clear:both}.lg-clr{clear:right}.lg-cll{clear:left}.lg-cln{clear:none}.lg-ps{position:static}.lg-pr{position:relative}.lg-pa{position:absolute}.lg-pf{position:fixed}.lg-pi{position:initial}.lg-sticky{position:sticky}.lg-di{display:inline}.lg-db{display:block}.lg-dib{display:inline-block}.lg-dn{display:none}.lg-dt{display:table}.lg-dtc{display:table-cell}.lg-vh{visibility:hidden}.lg-vv{visibility:visible}.lg-vi{visibility:initial}.lg-df{display:flex}.lg-dif{display:inline-flex}.lg-fa{flex:auto}.lg-fi{flex:initial}.lg-fdr{flex-direction:row}.lg-fdrr{flex-direction:row-reverse}.lg-fdc{flex-direction:column}.lg-fdcr{flex-direction:column-reverse}.lg-fwn{flex-wrap:nowrap}.lg-fw{flex-wrap:wrap}.lg-fwr{flex-wrap:wrap-reverse}.lg-fgu{flex-grow:unset}.lg-jcfs{justify-content:flex-start}.lg-jcfe{justify-content:flex-end}.lg-jcc{justify-content:center}.lg-jcsb{justify-content:space-between}.lg-jcsa{justify-content:space-around}.lg-acs{align-content:stretch}.lg-acfs{align-content:flex-start}.lg-acfe{align-content:flex-end}.lg-acc{align-content:center}.lg-acsb{align-content:space-between}.lg-acsa{align-content:space-around}.lg-ais{align-items:stretch}.lg-aifs{align-items:flex-start}.lg-aife{align-items:flex-end}.lg-aic{align-items:center}.lg-aib{align-items:baseline}.lg-asa{align-self:auto}.lg-ass{align-self:stretch}.lg-asfs{align-self:flex-start}.lg-asfe{align-self:flex-end}.lg-asc{align-self:center}.lg-asb{align-self:baseline}.lg-fshi{flex-shrink:initial}.lg-fshu{flex-shrink:unset}.lg-tlf{table-layout:fixed}.lg-tla{table-layout:auto}.lg-fsn{font-style:normal}.lg-fsi{font-style:italic}.lg-fso{font-style:oblique}.lg-fs.initial{font-style:initial}.lg-fs.inherit{font-style:inherit}.lg-wb{word-break:break-all}.lg-wsn{white-space:nowrap}.lg-wsp{white-space:pre}.lg-wspl{white-space:pre-line}.lg-wsi{white-space:initial}.lg-b0{border:0}.lg-bn{border:0}.lg-bt0{border-top:0}.lg-br0{border-right:0}.lg-bb0{border-bottom:0}.lg-bl0{border-left:0}.lg-ba0i{border:0!important}.lg-bni{border:0!important}.lg-bt0i{border-top:0!important}.lg-br0i{border-right:0!important}.lg-bb0i{border-bottom:0!important}.lg-bl0i{border-left:0!important}.lg-vat{vertical-align:top}.lg-vam{vertical-align:middle}.lg-vab{vertical-align:bottom}.lg-vabl{vertical-align:baseline}.lg-oa{overflow:auto}.lg-oh{overflow:hidden}.lg-oxh{overflow-x:hidden}.lg-oyh{overflow-y:hidden}.lg-oxa{overflow-x:auto}.lg-oya{overflow-y:auto}.lg-cp{cursor:pointer}.lg-cd{cursor:default}.lg-cm{cursor:move}.lg-ct{cursor:text}.lg-cw{cursor:wait}.lg-cn{cursor:none}.lg-cna{cursor:not-allowed}
+     @for $i from 0 to 10{@for $j from 0 to 11{@if($j == 0){.lg-fg-#{$i}{flex-grow:#{$i}}}@else if($i < 1){.lg-fg-#{$i}#{$j}{flex-grow:$i + $j * .1}}@else if $i>1 and $i < 10{.lg-fg-#{$i}-#{$j}{flex-grow:$i + $j * .1}}}}@for $i from 0 to 11{.lg-fsh#{$i}{flex-shrink:$i}}@for $i from 2 to 10{.lg-lc#{$i}{display:-webkit-box;-webkit-line-clamp:$i;line-height:$lineClampHeight;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){@for $i from 2 to 10{.lg-lc#{$i}{display:block;height:$i * $lineClampHeight + rem}}}@for $i from 0 to 256{.lg-c#{$i}{color:rgb($i,$i,$i)}}@for $i from 1 to 10{.lg-fw#{$i * 100}{font-weight:$i * 100}}@for $i from 0 to $maximum{.lg-fs#{$i}px{font-size:#{$i}+ px}}@for $i from 1 to 11{@for $j from 0 to 10{@if($j == 0){.lg-fs#{$i}rem{font-size:#{$i}+ rem}}@else if($i < 10){.lg-fs#{$i}-#{$j}rem{font-size:$i + $j * .1rem}}}}@for $i from 1 to 10{@for $j from 0 to 10{@if($j == 0){.lg-lh#{$i}rem{line-height:#{$i}+ rem}}@else if($i < 10){.lg-lh#{$i}-#{$j}rem{line-height:$i + $j * .1rem}}}}@for $i from 0 to 10{@for $j from 0 to 10{@if($j == 0){.lg-lh#{$i}{line-height:$i}}@else if($i < 10){.lg-lh#{$i}-#{$j}{line-height:$i + $j * .1}}}}@for $i from 0 to $maximum{.lg-lh#{$i}px{line-height:#{$i}+ px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.lg-lh#{$i}vh{line-height:#{$i}+ vh}}@else if($i < 10){.lg-lh#{$i}-#{$j}vh{line-height:$i + $j * .1vh}}}}@for $i from 0 to $maximum{.lg-pa#{$i}px{padding:#{$i}+ px}}@for $i from 0 to $maximum{.lg-pt#{$i}px{padding-top:#{$i}+ px}}@for $i from 0 to $maximum{.lg-pr#{$i}px{padding-right:#{$i}+ px}}@for $i from 0 to $maximum{.lg-pb#{$i}px{padding-bottom:#{$i}+ px}}@for $i from 0 to $maximum{.lg-pl#{$i}px{padding-left:#{$i}+ px}}@for $i from 0 to $maximum{.lg-ma#{$i}px{margin:#{$i}+ px}}@for $i from 0 to $maximum{.lg-mt#{$i}px{margin-top:#{$i}+ px}}@for $i from 0 to $maximum{.lg-mr#{$i}px{margin-right:#{$i}+ px}}@for $i from 0 to $maximum{.lg-mb#{$i}px{margin-bottom:#{$i}+ px}}@for $i from 0 to $maximum{.lg-ml#{$i}px{margin-left:#{$i}+ px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.lg-pt#{$i}rem{padding-top:#{$i}+ rem}}@else if($i < 10){.lg-pt#{$i}-#{$j}rem{padding-top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.lg-pr#{$i}rem{padding-right:#{$i}+ rem}}@else if($i < 10){.lg-pr#{$i}-#{$j}rem{padding-right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.lg-pb#{$i}rem{padding-bottom:#{$i}+ rem}}@else if($i < 10){.lg-pb#{$i}-#{$j}rem{padding-bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.lg-pl#{$i}rem{padding-left:#{$i}+ rem}}@else if($i < 10){.lg-pl#{$i}-#{$j}rem{padding-left:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.lg-mt#{$i}rem{margin-top:#{$i}+ rem}}@else if($i < 10){.lg-mt#{$i}-#{$j}rem{margin-top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.lg-mr#{$i}rem{margin-right:#{$i}+ rem}}@else if($i < 10){.lg-mr#{$i}-#{$j}rem{margin-right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.lg-mb#{$i}rem{margin-bottom:#{$i}+ rem}}@else if($i < 10){.lg-mb#{$i}-#{$j}rem{margin-bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.lg-ml#{$i}rem{margin-left:#{$i}+ rem}}@else if($i < 10){.lg-ml#{$i}-#{$j}rem{margin-left:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.lg-w#{$i}p{width:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.lg-w#{$i}vw{width:#{$i}+ vw}}@for $i from 0 to $maximum{.lg-w#{$i}rem{width:#{$i}+ rem}}@for $i from 0 to 1921{.lg-w#{$i}px{width:$i + px}}@for $i from 0 to 1081{.lg-h#{$i}px{height:$i + px}}@for $i from 0 to $maximum{.lg-h#{$i}p{height:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.lg-h#{$i}vh{height:#{$i}+ vh}}@for $i from 0 to $maximum{.lg-h#{$i}vw{height:#{$i}+ vw}}@for $i from 0 to $maximum{.lg-t#{$i}px{top:$i + px}}@for $i from 0 to $maximum{.lg-t#{$i}p{top:$i + #{'%'}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.lg-t#{$i}rem{top:#{$i}+ rem}}@else if($i < 10){.lg-t#{$i}-#{$j}rem{top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.lg-r#{$i}px{right:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.lg-r#{$i}rem{right:#{$i}+ rem}}@else if($i < 10){.lg-r#{$i}-#{$j}rem{right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.lg-b#{$i}px{bottom:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.lg-b#{$i}rem{bottom:#{$i}+ rem}}@else if($i < 10){.lg-b#{$i}-#{$j}rem{bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.lg-l#{$i}px{left:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.lg-l#{$i}rem{left:#{$i}+ rem}}@else if($i < 10){.lg-l#{$i}-#{$j}rem{left:$i + $j * .1rem}}}}@for $i from 0 to 11{.lg-o#{$i}{opacity:$i * .1}}@for $i from 0 to 13{@if($i == 0){.lg-grid-#{$i}{width:auto}}@else{.lg-grid-#{$i}{width:$i * calc(100/12) + #{'%'}}}}@for $i from 0 to 13{.lg-offset-#{$i}{margin-left:$i * calc(100/12) + #{'%'}}}@for $i from 0 to 11{@for $j from 0 to 10{@if($j == 0){.lg-reverse#{$i}rem{margin:- #{$i}+ rem;[class^='grid-']{padding:#{$i}+ rem}}}@else if($i < 10){.lg-reverse#{$i}-#{$j}rem{margin:-($i + $j * .1rem);[class^='grid-']{padding:$i + $j * .1rem}}}}}
 }
 /* [ .md- ] Medium */
 @media(max-width:1024px){
-    .md-bnc{background:center no-repeat}.md-bnt{background:top no-repeat}.md-bnb{background:bottom no-repeat}.md-bsc{background-size:cover}.md-bsi{background-size:initial}.md-baf{background-attachment:fixed}.md-tar{text-align:right}.md-tal{text-align:left}.md-tac{text-align:center}.md-taj{text-align:justify}.md-fr{float:right}.md-fl{float:left}.md-fn{float:none}.md-clb{clear:both}.md-clr{clear:right}.md-cll{clear:left}.md-cln{clear:none}.md-ps{position:static}.md-pr{position:relative}.md-pa{position:absolute}.md-pf{position:fixed}.md-pi{position:initial}.md-sticky{position:sticky}.md-db{display:block}.md-di{display:inline-block}.md-dn{display:none}.md-dt{display:table}.md-dtc{display:table-cell}.md-vh{visibility:hidden}.md-vv{visibility:visible}.md-vi{visibility:initial}.md-df{display:flex}.md-dif{display:inline-flex}.md-fdr{flex-direction:row}.md-fdrr{flex-direction:row-reverse}.md-fdc{flex-direction:column}.md-fdcr{flex-direction:column-reverse}.md-fwn{flex-wrap:nowrap}.md-fw{flex-wrap:wrap}.md-fwr{flex-wrap:wrap-reverse}.md-jcfs{justify-content:flex-start}.md-jcfe{justify-content:flex-end}.md-jcc{justify-content:center}.md-jcsb{justify-content:space-between}.md-jcsa{justify-content:space-around}.md-acs{align-content:stretch}.md-acfs{align-content:flex-start}.md-acfe{align-content:flex-end}.md-acc{align-content:center}.md-acsb{align-content:space-between}.md-acsa{align-content:space-around}.md-ais{align-items:stretch}.md-aifs{align-items:flex-start}.md-aife{align-items:flex-end}.md-aic{align-items:center}.md-aib{align-items:baseline}.md-asa{align-self:auto}.md-ass{align-self:stretch}.md-asfs{align-self:flex-start}.md-asfe{align-self:flex-end}.md-asc{align-self:center}.md-asb{align-self:baseline}.md-tlf{table-layout:fixed}.md-fsn{font-style:normal}.md-fsi{font-style:italic}.md-fso{font-style:oblique}.md-fs.initial{font-style:initial}.md-fs.inherit{font-style:inherit}.md-wb{word-break:break-all}.md-wsn{white-space:nowrap}.md-wsp{white-space:pre}.md-wspl{white-space:pre-line}.b0,.md-bn{border:0}.md-bt0{border-top:0}.md-br0{border-right:0}.md-bb0{border-bottom:0}.md-bl0{border-left:0}.md-vat{vertical-align:top}.md-vam{vertical-align:middle}.md-vab{vertical-align:bottom}.md-oa{overflow:auto}.md-oh{overflow:hidden}.md-oxh{overflow-x:hidden}.md-oyh{overflow-y:hidden}.md-oxa{overflow-x:auto}.md-oya{overflow-y:auto}.md-cp{cursor:pointer}.md-cd{cursor:default}.md-cm{cursor:move}.md-ct{cursor:text}.md-cw{cursor:wait}.md-cn{cursor:none}
-    @for $i from 2 to 10{.md-lc#{$i}{display:-webkit-box;-webkit-line-clamp:$i;line-height:$lineClampHeight;-webkit-box-orient:vertical;overflow:hidden;text-overflow: ellipsis;}}@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {@for $i from 2 to 10{.md-lc#{$i}{display:block;height:$i * $lineClampHeight + rem;}}}@for $i from 0 to 256{.md-c#{$i}{color:rgb($i, $i, $i);}}@for $i from 1 to 10{.md-fw#{$i * 100}{font-weight:$i * 100 }}@for $i from 0 to $maximum{.md-fs#{$i}px{font-size:#{$i}+ px }}@for $i from 1 to 11{@for $j from 0 to 10{@if($j == 0) {.md-fs#{$i}rem{font-size:#{$i}+ rem }}@else if($i < 10) {.md-fs#{$i}0#{$j}rem{font-size:$i + $j * 0.1rem }}}}@for $i from 1 to 10{@for $j from 0 to 10{@if($j == 0) {.md-lh#{$i}rem{line-height:#{$i}+ rem }}@else if($i < 10) {.md-lh#{$i}0#{$j}rem{line-height:$i + $j * 0.1rem }}}}@for $i from 0 to 10{@for $j from 0 to 10{@if($j == 0) {.md-lh#{$i}{line-height:$i }}@else if($i < 10) {.md-lh#{$i}0#{$j}{line-height:$i + $j * 0.1 }}}}@for $i from 0 to $maximum{.md-lh#{$i}px{line-height:#{$i}+ px }}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.md-lh#{$i}vh{line-height:#{$i}+ vh }}@else if($i < 10) {.md-lh#{$i}0#{$j}vh{line-height:$i + $j * 0.1vh }}}}@for $i from 0 to $maximum{@if($i == 0) {.md-pa#{$i}{padding:0 }}@else if($i < 10) {.md-pa#{$i}px{padding:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.md-pt#{$i}{padding-top:0 }}@else if($i < 10) {.md-pt#{$i}px{padding-top:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.md-pr#{$i}{padding-right:0 }}@else if($i < 10) {.md-pr#{$i}px{padding-right:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.md-pb#{$i}{padding-bottom:0 }}@else if($i < 10) {.md-pb#{$i}px{padding-bottom:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.md-pl#{$i}{padding-left:0 }}@else if($i < 10) {.md-pl#{$i}px{padding-left:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.md-ma#{$i}{margin:0 }}@else if($i < 10) {.md-ma#{$i}px{margin:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.md-mt#{$i}{margin-top:0 }}@else if($i < 10) {.md-mt#{$i}px{margin-top:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.md-mr#{$i}{margin-right:0 }}@else if($i < 10) {.md-mr#{$i}px{margin-right:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.md-mb#{$i}{margin-bottom:0 }}@else if($i < 10) {.md-mb#{$i}px{margin-bottom:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.md-ml#{$i}{margin-left:0 }}@else if($i < 10) {.md-ml#{$i}px{margin-left:#{$i}+ px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.md-pt#{$i}rem{padding-top:#{$i}+ rem }}@else if($i < 10) {.md-pt#{$i}0#{$j}rem{padding-top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.md-pr#{$i}rem{padding-right:#{$i}+ rem }}@else if($i < 10) {.md-pr#{$i}0#{$j}rem{padding-right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.md-pb#{$i}rem{padding-bottom:#{$i}+ rem }}@else if($i < 10) {.md-pb#{$i}0#{$j}rem{padding-bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.md-pl#{$i}rem{padding-left:#{$i}+ rem }}@else if($i < 10) {.md-pl#{$i}0#{$j}rem{padding-left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.md-mt#{$i}rem{margin-top:#{$i}+ rem }}@else if($i < 10) {.md-mt#{$i}0#{$j}rem{margin-top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.md-mr#{$i}rem{margin-right:#{$i}+ rem }}@else if($i < 10) {.md-mr#{$i}0#{$j}rem{margin-right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.md-mb#{$i}rem{margin-bottom:#{$i}+ rem }}@else if($i < 10) {.md-mb#{$i}0#{$j}rem{margin-bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.md-ml#{$i}rem{margin-left:#{$i}+ rem }}@else if($i < 10) {.md-ml#{$i}0#{$j}rem{margin-left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{.md-w#{$i}p{width:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.md-w#{$i}vw{width:#{$i}+ vw }}@for $i from 0 to $maximum{.md-w#{$i}rem{width:#{$i}+ rem }}@for $i from 0 to $maximum{@if($i == 0) {.md-w#{$i}{width:$i }}@else if($i < 10) {.md-w#{$i}px{width:$i + px }}}@for $i from 0 to $maximum{@if($i == 0) {.md-h#{$i}{height:$i }}@else if($i < 10) {.md-h#{$i}px{height:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.md-h#{$i}p{height:#{$i}+ #{'%'}}}@else if($i < 10) {.md-h#{$i}0#{$j}p{height:$i + $j * 0.1 + #{'%'}}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.md-h#{$i}vh{width:#{$i}+ vh }}@else if($i < 10) {.md-h#{$i}0#{$j}vh{width:$i + $j * 0.1vh }}}}@for $i from 0 to $maximum{@if($i == 0) {.md-t#{$i}{top:$i }}@else if($i < 10) {.md-t#{$i}px{top:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.md-t#{$i}rem{top:#{$i}+ rem }}@else if($i < 10) {.md-t#{$i}0#{$j}rem{top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.md-r#{$i}{right:$i }}@else if($i < 10) {.md-r#{$i}px{right:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.md-r#{$i}rem{right:#{$i}+ rem }}@else if($i < 10) {.md-r#{$i}0#{$j}rem{right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.md-b#{$i}{bottom:$i }}@else if($i < 10) {.md-b#{$i}px{bottom:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.md-b#{$i}rem{bottom:#{$i}+ rem }}@else if($i < 10) {.md-b#{$i}0#{$j}rem{bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.md-l#{$i}{left:$i }}@else if($i < 10) {.md-l#{$i}px{left:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.md-l#{$i}rem{left:#{$i}+ rem }}@else if($i < 10) {.md-l#{$i}0#{$j}rem{left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{.md-grid-#{$i}{width:$i * calc(100/12) + #{'%'}}}@for $i from 0 to $maximum{.md-offset-#{$i}{margin-left:$i * calc(100/12) + #{'%'}}}
+    .md-off{object-fit:fill}.md-ofc{object-fit:cover}.md-ofct{object-fit:contain}.md-ofn{object-fit:none}.md-ofsd{object-fit:scale-down}.md-tty-50p{transform:translateY(-50%)}.md-ttx-50p{transform:translateX(-50%)}.md-ha{height:auto}.md-hai{height:auto!important}.md-lhi{line-height:initial}.md-lhii{line-height:initial!important}.md-ta{top:auto}.md-ra{right:auto}.md-ba{bottom:auto}.md-la{left:auto}.md-tai{top:auto!important}.md-rai{right:auto!important}.md-bai{bottom:auto!important}.md-lai{left:auto!important}.md-t0{top:0}.md-r0{right:0}.md-b0{bottom:0}.md-l0{left:0}.md-t0i{top:0!important}.md-r0i{right:0!important}.md-b0i{bottom:0!important}.md-l0i{left:0!important}.md-pa0{padding:0}.md-pt0{padding-top:0}.md-pr0{padding-right:0}.md-pb0{padding-bottom:0}.md-pl0{padding-left:0}.md-pa0i{padding:0!important}.md-pt0i{padding-top:0!important}.md-pr0i{padding-right:0!important}.md-pb0i{padding-bottom:0!important}.md-pl0i{padding-left:0!important}.md-ma0{margin:0}.md-mt0{margin-top:0}.md-mr0{margin-right:0}.md-mb0{margin-bottom:0}.md-ml0{margin-left:0}.md-maai{margin:auto!important}.md-mta{margin-top:auto}.md-mra{margin-right:auto}.md-mba{margin-bottom:auto}.md-mla{margin-left:auto}.md-ma0i{margin:0!important}.md-mt0i{margin-top:0!important}.md-mr0i{margin-right:0!important}.md-mb0i{margin-bottom:0!important}.md-ml0i{margin-left:0!important}.md-bnc{background:no-repeat center}.md-bnt{background:no-repeat top}.md-bnb{background:no-repeat bottom}.md-bsc{background-size:cover}.md-bsi{background-size:initial}.md-baf{background-attachment:fixed}.md-tar{text-align:right}.md-tal{text-align:left}.md-tac{text-align:center}.md-taj{text-align:justify}.md-fr{float:right}.md-fl{float:left}.md-fn{float:none}.md-clb{clear:both}.md-clr{clear:right}.md-cll{clear:left}.md-cln{clear:none}.md-ps{position:static}.md-pr{position:relative}.md-pa{position:absolute}.md-pf{position:fixed}.md-pi{position:initial}.md-sticky{position:sticky}.md-di{display:inline}.md-db{display:block}.md-dib{display:inline-block}.md-dn{display:none}.md-dt{display:table}.md-dtc{display:table-cell}.md-vh{visibility:hidden}.md-vv{visibility:visible}.md-vi{visibility:initial}.md-df{display:flex}.md-dif{display:inline-flex}.md-fa{flex:auto}.md-fi{flex:initial}.md-fdr{flex-direction:row}.md-fdrr{flex-direction:row-reverse}.md-fdc{flex-direction:column}.md-fdcr{flex-direction:column-reverse}.md-fwn{flex-wrap:nowrap}.md-fw{flex-wrap:wrap}.md-fwr{flex-wrap:wrap-reverse}.md-fgu{flex-grow:unset}.md-jcfs{justify-content:flex-start}.md-jcfe{justify-content:flex-end}.md-jcc{justify-content:center}.md-jcsb{justify-content:space-between}.md-jcsa{justify-content:space-around}.md-acs{align-content:stretch}.md-acfs{align-content:flex-start}.md-acfe{align-content:flex-end}.md-acc{align-content:center}.md-acsb{align-content:space-between}.md-acsa{align-content:space-around}.md-ais{align-items:stretch}.md-aifs{align-items:flex-start}.md-aife{align-items:flex-end}.md-aic{align-items:center}.md-aib{align-items:baseline}.md-asa{align-self:auto}.md-ass{align-self:stretch}.md-asfs{align-self:flex-start}.md-asfe{align-self:flex-end}.md-asc{align-self:center}.md-asb{align-self:baseline}.md-fshi{flex-shrink:initial}.md-fshu{flex-shrink:unset}.md-tlf{table-layout:fixed}.md-tla{table-layout:auto}.md-fsn{font-style:normal}.md-fsi{font-style:italic}.md-fso{font-style:oblique}.md-fs.initial{font-style:initial}.md-fs.inherit{font-style:inherit}.md-wb{word-break:break-all}.md-wsn{white-space:nowrap}.md-wsp{white-space:pre}.md-wspl{white-space:pre-line}.md-wsi{white-space:initial}.md-b0{border:0}.md-bn{border:0}.md-bt0{border-top:0}.md-br0{border-right:0}.md-bb0{border-bottom:0}.md-bl0{border-left:0}.md-ba0i{border:0!important}.md-bni{border:0!important}.md-bt0i{border-top:0!important}.md-br0i{border-right:0!important}.md-bb0i{border-bottom:0!important}.md-bl0i{border-left:0!important}.md-vat{vertical-align:top}.md-vam{vertical-align:middle}.md-vab{vertical-align:bottom}.md-vabl{vertical-align:baseline}.md-oa{overflow:auto}.md-oh{overflow:hidden}.md-oxh{overflow-x:hidden}.md-oyh{overflow-y:hidden}.md-oxa{overflow-x:auto}.md-oya{overflow-y:auto}.md-cp{cursor:pointer}.md-cd{cursor:default}.md-cm{cursor:move}.md-ct{cursor:text}.md-cw{cursor:wait}.md-cn{cursor:none}.md-cna{cursor:not-allowed}
+     @for $i from 0 to 10{@for $j from 0 to 11{@if($j == 0){.md-fg-#{$i}{flex-grow:#{$i}}}@else if($i < 1){.md-fg-#{$i}#{$j}{flex-grow:$i + $j * .1}}@else if $i>1 and $i < 10{.md-fg-#{$i}-#{$j}{flex-grow:$i + $j * .1}}}}@for $i from 0 to 11{.md-fsh#{$i}{flex-shrink:$i}}@for $i from 2 to 10{.md-lc#{$i}{display:-webkit-box;-webkit-line-clamp:$i;line-height:$lineClampHeight;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){@for $i from 2 to 10{.md-lc#{$i}{display:block;height:$i * $lineClampHeight + rem}}}@for $i from 0 to 256{.md-c#{$i}{color:rgb($i,$i,$i)}}@for $i from 1 to 10{.md-fw#{$i * 100}{font-weight:$i * 100}}@for $i from 0 to $maximum{.md-fs#{$i}px{font-size:#{$i}+ px}}@for $i from 1 to 11{@for $j from 0 to 10{@if($j == 0){.md-fs#{$i}rem{font-size:#{$i}+ rem}}@else if($i < 10){.md-fs#{$i}-#{$j}rem{font-size:$i + $j * .1rem}}}}@for $i from 1 to 10{@for $j from 0 to 10{@if($j == 0){.md-lh#{$i}rem{line-height:#{$i}+ rem}}@else if($i < 10){.md-lh#{$i}-#{$j}rem{line-height:$i + $j * .1rem}}}}@for $i from 0 to 10{@for $j from 0 to 10{@if($j == 0){.md-lh#{$i}{line-height:$i}}@else if($i < 10){.md-lh#{$i}-#{$j}{line-height:$i + $j * .1}}}}@for $i from 0 to $maximum{.md-lh#{$i}px{line-height:#{$i}+ px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.md-lh#{$i}vh{line-height:#{$i}+ vh}}@else if($i < 10){.md-lh#{$i}-#{$j}vh{line-height:$i + $j * .1vh}}}}@for $i from 0 to $maximum{.md-pa#{$i}px{padding:#{$i}+ px}}@for $i from 0 to $maximum{.md-pt#{$i}px{padding-top:#{$i}+ px}}@for $i from 0 to $maximum{.md-pr#{$i}px{padding-right:#{$i}+ px}}@for $i from 0 to $maximum{.md-pb#{$i}px{padding-bottom:#{$i}+ px}}@for $i from 0 to $maximum{.md-pl#{$i}px{padding-left:#{$i}+ px}}@for $i from 0 to $maximum{.md-ma#{$i}px{margin:#{$i}+ px}}@for $i from 0 to $maximum{.md-mt#{$i}px{margin-top:#{$i}+ px}}@for $i from 0 to $maximum{.md-mr#{$i}px{margin-right:#{$i}+ px}}@for $i from 0 to $maximum{.md-mb#{$i}px{margin-bottom:#{$i}+ px}}@for $i from 0 to $maximum{.md-ml#{$i}px{margin-left:#{$i}+ px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.md-pt#{$i}rem{padding-top:#{$i}+ rem}}@else if($i < 10){.md-pt#{$i}-#{$j}rem{padding-top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.md-pr#{$i}rem{padding-right:#{$i}+ rem}}@else if($i < 10){.md-pr#{$i}-#{$j}rem{padding-right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.md-pb#{$i}rem{padding-bottom:#{$i}+ rem}}@else if($i < 10){.md-pb#{$i}-#{$j}rem{padding-bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.md-pl#{$i}rem{padding-left:#{$i}+ rem}}@else if($i < 10){.md-pl#{$i}-#{$j}rem{padding-left:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.md-mt#{$i}rem{margin-top:#{$i}+ rem}}@else if($i < 10){.md-mt#{$i}-#{$j}rem{margin-top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.md-mr#{$i}rem{margin-right:#{$i}+ rem}}@else if($i < 10){.md-mr#{$i}-#{$j}rem{margin-right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.md-mb#{$i}rem{margin-bottom:#{$i}+ rem}}@else if($i < 10){.md-mb#{$i}-#{$j}rem{margin-bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.md-ml#{$i}rem{margin-left:#{$i}+ rem}}@else if($i < 10){.md-ml#{$i}-#{$j}rem{margin-left:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.md-w#{$i}p{width:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.md-w#{$i}vw{width:#{$i}+ vw}}@for $i from 0 to $maximum{.md-w#{$i}rem{width:#{$i}+ rem}}@for $i from 0 to 1921{.md-w#{$i}px{width:$i + px}}@for $i from 0 to 1081{.md-h#{$i}px{height:$i + px}}@for $i from 0 to $maximum{.md-h#{$i}p{height:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.md-h#{$i}vh{height:#{$i}+ vh}}@for $i from 0 to $maximum{.md-h#{$i}vw{height:#{$i}+ vw}}@for $i from 0 to $maximum{.md-t#{$i}px{top:$i + px}}@for $i from 0 to $maximum{.md-t#{$i}p{top:$i + #{'%'}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.md-t#{$i}rem{top:#{$i}+ rem}}@else if($i < 10){.md-t#{$i}-#{$j}rem{top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.md-r#{$i}px{right:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.md-r#{$i}rem{right:#{$i}+ rem}}@else if($i < 10){.md-r#{$i}-#{$j}rem{right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.md-b#{$i}px{bottom:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.md-b#{$i}rem{bottom:#{$i}+ rem}}@else if($i < 10){.md-b#{$i}-#{$j}rem{bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.md-l#{$i}px{left:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.md-l#{$i}rem{left:#{$i}+ rem}}@else if($i < 10){.md-l#{$i}-#{$j}rem{left:$i + $j * .1rem}}}}@for $i from 0 to 11{.md-o#{$i}{opacity:$i * .1}}@for $i from 0 to 13{@if($i == 0){.md-grid-#{$i}{width:auto}}@else{.md-grid-#{$i}{width:$i * calc(100/12) + #{'%'}}}}@for $i from 0 to 13{.md-offset-#{$i}{margin-left:$i * calc(100/12) + #{'%'}}}@for $i from 0 to 11{@for $j from 0 to 10{@if($j == 0){.md-reverse#{$i}rem{margin:- #{$i}+ rem;[class^='grid-']{padding:#{$i}+ rem}}}@else if($i < 10){.md-reverse#{$i}-#{$j}rem{margin:-($i + $j * .1rem);[class^='grid-']{padding:$i + $j * .1rem}}}}}
 }
 /* [ .sm- ] Small */
 @media(max-width:768px){
-    .sm-bnc{background:center no-repeat}.sm-bnt{background:top no-repeat}.sm-bnb{background:bottom no-repeat}.sm-bsc{background-size:cover}.sm-bsi{background-size:initial}.sm-baf{background-attachment:fixed}.sm-tar{text-align:right}.sm-tal{text-align:left}.sm-tac{text-align:center}.sm-taj{text-align:justify}.sm-fr{float:right}.sm-fl{float:left}.sm-fn{float:none}.sm-clb{clear:both}.sm-clr{clear:right}.sm-cll{clear:left}.sm-cln{clear:none}.sm-ps{position:static}.sm-pr{position:relative}.sm-pa{position:absolute}.sm-pf{position:fixed}.sm-pi{position:initial}.sm-sticky{position:sticky}.sm-db{display:block}.sm-di{display:inline-block}.sm-dn{display:none}.sm-dt{display:table}.sm-dtc{display:table-cell}.sm-vh{visibility:hidden}.sm-vv{visibility:visible}.sm-vi{visibility:initial}.sm-df{display:flex}.sm-dif{display:inline-flex}.sm-fdr{flex-direction:row}.sm-fdrr{flex-direction:row-reverse}.sm-fdc{flex-direction:column}.sm-fdcr{flex-direction:column-reverse}.sm-fwn{flex-wrap:nowrap}.sm-fw{flex-wrap:wrap}.sm-fwr{flex-wrap:wrap-reverse}.sm-jcfs{justify-content:flex-start}.sm-jcfe{justify-content:flex-end}.sm-jcc{justify-content:center}.sm-jcsb{justify-content:space-between}.sm-jcsa{justify-content:space-around}.sm-acs{align-content:stretch}.sm-acfs{align-content:flex-start}.sm-acfe{align-content:flex-end}.sm-acc{align-content:center}.sm-acsb{align-content:space-between}.sm-acsa{align-content:space-around}.sm-ais{align-items:stretch}.sm-aifs{align-items:flex-start}.sm-aife{align-items:flex-end}.sm-aic{align-items:center}.sm-aib{align-items:baseline}.sm-asa{align-self:auto}.sm-ass{align-self:stretch}.sm-asfs{align-self:flex-start}.sm-asfe{align-self:flex-end}.sm-asc{align-self:center}.sm-asb{align-self:baseline}.sm-tlf{table-layout:fixed}.sm-fsn{font-style:normal}.sm-fsi{font-style:italic}.sm-fso{font-style:oblique}.sm-fs.initial{font-style:initial}.sm-fs.inherit{font-style:inherit}.sm-wb{word-break:break-all}.sm-wsn{white-space:nowrap}.sm-wsp{white-space:pre}.sm-wspl{white-space:pre-line}.b0,.sm-bn{border:0}.sm-bt0{border-top:0}.sm-br0{border-right:0}.sm-bb0{border-bottom:0}.sm-bl0{border-left:0}.sm-vat{vertical-align:top}.sm-vam{vertical-align:middle}.sm-vab{vertical-align:bottom}.sm-oa{overflow:auto}.sm-oh{overflow:hidden}.sm-oxh{overflow-x:hidden}.sm-oyh{overflow-y:hidden}.sm-oxa{overflow-x:auto}.sm-oya{overflow-y:auto}.sm-cp{cursor:pointer}.sm-cd{cursor:default}.sm-cm{cursor:move}.sm-ct{cursor:text}.sm-cw{cursor:wait}.sm-cn{cursor:none}
-    @for $i from 2 to 10{.sm-lc#{$i}{display:-webkit-box;-webkit-line-clamp:$i;line-height:$lineClampHeight;-webkit-box-orient:vertical;overflow:hidden;text-overflow: ellipsis;}}@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {@for $i from 2 to 10{.sm-lc#{$i}{display:block;height:$i * $lineClampHeight + rem;}}}@for $i from 0 to 256{.sm-c#{$i}{color:rgb($i, $i, $i);}}@for $i from 1 to 10{.sm-fw#{$i * 100}{font-weight:$i * 100 }}@for $i from 0 to $maximum{.sm-fs#{$i}px{font-size:#{$i}+ px }}@for $i from 1 to 11{@for $j from 0 to 10{@if($j == 0) {.sm-fs#{$i}rem{font-size:#{$i}+ rem }}@else if($i < 10) {.sm-fs#{$i}0#{$j}rem{font-size:$i + $j * 0.1rem }}}}@for $i from 1 to 10{@for $j from 0 to 10{@if($j == 0) {.sm-lh#{$i}rem{line-height:#{$i}+ rem }}@else if($i < 10) {.sm-lh#{$i}0#{$j}rem{line-height:$i + $j * 0.1rem }}}}@for $i from 0 to 10{@for $j from 0 to 10{@if($j == 0) {.sm-lh#{$i}{line-height:$i }}@else if($i < 10) {.sm-lh#{$i}0#{$j}{line-height:$i + $j * 0.1 }}}}@for $i from 0 to $maximum{.sm-lh#{$i}px{line-height:#{$i}+ px }}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.sm-lh#{$i}vh{line-height:#{$i}+ vh }}@else if($i < 10) {.sm-lh#{$i}0#{$j}vh{line-height:$i + $j * 0.1vh }}}}@for $i from 0 to $maximum{@if($i == 0) {.sm-pa#{$i}{padding:0 }}@else if($i < 10) {.sm-pa#{$i}px{padding:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.sm-pt#{$i}{padding-top:0 }}@else if($i < 10) {.sm-pt#{$i}px{padding-top:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.sm-pr#{$i}{padding-right:0 }}@else if($i < 10) {.sm-pr#{$i}px{padding-right:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.sm-pb#{$i}{padding-bottom:0 }}@else if($i < 10) {.sm-pb#{$i}px{padding-bottom:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.sm-pl#{$i}{padding-left:0 }}@else if($i < 10) {.sm-pl#{$i}px{padding-left:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.sm-ma#{$i}{margin:0 }}@else if($i < 10) {.sm-ma#{$i}px{margin:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.sm-mt#{$i}{margin-top:0 }}@else if($i < 10) {.sm-mt#{$i}px{margin-top:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.sm-mr#{$i}{margin-right:0 }}@else if($i < 10) {.sm-mr#{$i}px{margin-right:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.sm-mb#{$i}{margin-bottom:0 }}@else if($i < 10) {.sm-mb#{$i}px{margin-bottom:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.sm-ml#{$i}{margin-left:0 }}@else if($i < 10) {.sm-ml#{$i}px{margin-left:#{$i}+ px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.sm-pt#{$i}rem{padding-top:#{$i}+ rem }}@else if($i < 10) {.sm-pt#{$i}0#{$j}rem{padding-top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.sm-pr#{$i}rem{padding-right:#{$i}+ rem }}@else if($i < 10) {.sm-pr#{$i}0#{$j}rem{padding-right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.sm-pb#{$i}rem{padding-bottom:#{$i}+ rem }}@else if($i < 10) {.sm-pb#{$i}0#{$j}rem{padding-bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.sm-pl#{$i}rem{padding-left:#{$i}+ rem }}@else if($i < 10) {.sm-pl#{$i}0#{$j}rem{padding-left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.sm-mt#{$i}rem{margin-top:#{$i}+ rem }}@else if($i < 10) {.sm-mt#{$i}0#{$j}rem{margin-top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.sm-mr#{$i}rem{margin-right:#{$i}+ rem }}@else if($i < 10) {.sm-mr#{$i}0#{$j}rem{margin-right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.sm-mb#{$i}rem{margin-bottom:#{$i}+ rem }}@else if($i < 10) {.sm-mb#{$i}0#{$j}rem{margin-bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.sm-ml#{$i}rem{margin-left:#{$i}+ rem }}@else if($i < 10) {.sm-ml#{$i}0#{$j}rem{margin-left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{.sm-w#{$i}p{width:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.sm-w#{$i}vw{width:#{$i}+ vw }}@for $i from 0 to $maximum{.sm-w#{$i}rem{width:#{$i}+ rem }}@for $i from 0 to $maximum{@if($i == 0) {.sm-w#{$i}{width:$i }}@else if($i < 10) {.sm-w#{$i}px{width:$i + px }}}@for $i from 0 to $maximum{@if($i == 0) {.sm-h#{$i}{height:$i }}@else if($i < 10) {.sm-h#{$i}px{height:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.sm-h#{$i}p{height:#{$i}+ #{'%'}}}@else if($i < 10) {.sm-h#{$i}0#{$j}p{height:$i + $j * 0.1 + #{'%'}}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.sm-h#{$i}vh{width:#{$i}+ vh }}@else if($i < 10) {.sm-h#{$i}0#{$j}vh{width:$i + $j * 0.1vh }}}}@for $i from 0 to $maximum{@if($i == 0) {.sm-t#{$i}{top:$i }}@else if($i < 10) {.sm-t#{$i}px{top:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.sm-t#{$i}rem{top:#{$i}+ rem }}@else if($i < 10) {.sm-t#{$i}0#{$j}rem{top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.sm-r#{$i}{right:$i }}@else if($i < 10) {.sm-r#{$i}px{right:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.sm-r#{$i}rem{right:#{$i}+ rem }}@else if($i < 10) {.sm-r#{$i}0#{$j}rem{right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.sm-b#{$i}{bottom:$i }}@else if($i < 10) {.sm-b#{$i}px{bottom:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.sm-b#{$i}rem{bottom:#{$i}+ rem }}@else if($i < 10) {.sm-b#{$i}0#{$j}rem{bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.sm-l#{$i}{left:$i }}@else if($i < 10) {.sm-l#{$i}px{left:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.sm-l#{$i}rem{left:#{$i}+ rem }}@else if($i < 10) {.sm-l#{$i}0#{$j}rem{left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{.sm-grid-#{$i}{width:$i * calc(100/12) + #{'%'}}}@for $i from 0 to $maximum{.sm-offset-#{$i}{margin-left:$i * calc(100/12) + #{'%'}}}
+    .sm-off{object-fit:fill}.sm-ofc{object-fit:cover}.sm-ofct{object-fit:contain}.sm-ofn{object-fit:none}.sm-ofsd{object-fit:scale-down}.sm-tty-50p{transform:translateY(-50%)}.sm-ttx-50p{transform:translateX(-50%)}.sm-ha{height:auto}.sm-hai{height:auto!important}.sm-lhi{line-height:initial}.sm-lhii{line-height:initial!important}.sm-ta{top:auto}.sm-ra{right:auto}.sm-ba{bottom:auto}.sm-la{left:auto}.sm-tai{top:auto!important}.sm-rai{right:auto!important}.sm-bai{bottom:auto!important}.sm-lai{left:auto!important}.sm-t0{top:0}.sm-r0{right:0}.sm-b0{bottom:0}.sm-l0{left:0}.sm-t0i{top:0!important}.sm-r0i{right:0!important}.sm-b0i{bottom:0!important}.sm-l0i{left:0!important}.sm-pa0{padding:0}.sm-pt0{padding-top:0}.sm-pr0{padding-right:0}.sm-pb0{padding-bottom:0}.sm-pl0{padding-left:0}.sm-pa0i{padding:0!important}.sm-pt0i{padding-top:0!important}.sm-pr0i{padding-right:0!important}.sm-pb0i{padding-bottom:0!important}.sm-pl0i{padding-left:0!important}.sm-ma0{margin:0}.sm-mt0{margin-top:0}.sm-mr0{margin-right:0}.sm-mb0{margin-bottom:0}.sm-ml0{margin-left:0}.sm-maai{margin:auto!important}.sm-mta{margin-top:auto}.sm-mra{margin-right:auto}.sm-mba{margin-bottom:auto}.sm-mla{margin-left:auto}.sm-ma0i{margin:0!important}.sm-mt0i{margin-top:0!important}.sm-mr0i{margin-right:0!important}.sm-mb0i{margin-bottom:0!important}.sm-ml0i{margin-left:0!important}.sm-bnc{background:no-repeat center}.sm-bnt{background:no-repeat top}.sm-bnb{background:no-repeat bottom}.sm-bsc{background-size:cover}.sm-bsi{background-size:initial}.sm-baf{background-attachment:fixed}.sm-tar{text-align:right}.sm-tal{text-align:left}.sm-tac{text-align:center}.sm-taj{text-align:justify}.sm-fr{float:right}.sm-fl{float:left}.sm-fn{float:none}.sm-clb{clear:both}.sm-clr{clear:right}.sm-cll{clear:left}.sm-cln{clear:none}.sm-ps{position:static}.sm-pr{position:relative}.sm-pa{position:absolute}.sm-pf{position:fixed}.sm-pi{position:initial}.sm-sticky{position:sticky}.sm-di{display:inline}.sm-db{display:block}.sm-dib{display:inline-block}.sm-dn{display:none}.sm-dt{display:table}.sm-dtc{display:table-cell}.sm-vh{visibility:hidden}.sm-vv{visibility:visible}.sm-vi{visibility:initial}.sm-df{display:flex}.sm-dif{display:inline-flex}.sm-fa{flex:auto}.sm-fi{flex:initial}.sm-fdr{flex-direction:row}.sm-fdrr{flex-direction:row-reverse}.sm-fdc{flex-direction:column}.sm-fdcr{flex-direction:column-reverse}.sm-fwn{flex-wrap:nowrap}.sm-fw{flex-wrap:wrap}.sm-fwr{flex-wrap:wrap-reverse}.sm-fgu{flex-grow:unset}.sm-jcfs{justify-content:flex-start}.sm-jcfe{justify-content:flex-end}.sm-jcc{justify-content:center}.sm-jcsb{justify-content:space-between}.sm-jcsa{justify-content:space-around}.sm-acs{align-content:stretch}.sm-acfs{align-content:flex-start}.sm-acfe{align-content:flex-end}.sm-acc{align-content:center}.sm-acsb{align-content:space-between}.sm-acsa{align-content:space-around}.sm-ais{align-items:stretch}.sm-aifs{align-items:flex-start}.sm-aife{align-items:flex-end}.sm-aic{align-items:center}.sm-aib{align-items:baseline}.sm-asa{align-self:auto}.sm-ass{align-self:stretch}.sm-asfs{align-self:flex-start}.sm-asfe{align-self:flex-end}.sm-asc{align-self:center}.sm-asb{align-self:baseline}.sm-fshi{flex-shrink:initial}.sm-fshu{flex-shrink:unset}.sm-tlf{table-layout:fixed}.sm-tla{table-layout:auto}.sm-fsn{font-style:normal}.sm-fsi{font-style:italic}.sm-fso{font-style:oblique}.sm-fs.initial{font-style:initial}.sm-fs.inherit{font-style:inherit}.sm-wb{word-break:break-all}.sm-wsn{white-space:nowrap}.sm-wsp{white-space:pre}.sm-wspl{white-space:pre-line}.sm-wsi{white-space:initial}.sm-b0{border:0}.sm-bn{border:0}.sm-bt0{border-top:0}.sm-br0{border-right:0}.sm-bb0{border-bottom:0}.sm-bl0{border-left:0}.sm-ba0i{border:0!important}.sm-bni{border:0!important}.sm-bt0i{border-top:0!important}.sm-br0i{border-right:0!important}.sm-bb0i{border-bottom:0!important}.sm-bl0i{border-left:0!important}.sm-vat{vertical-align:top}.sm-vam{vertical-align:middle}.sm-vab{vertical-align:bottom}.sm-vabl{vertical-align:baseline}.sm-oa{overflow:auto}.sm-oh{overflow:hidden}.sm-oxh{overflow-x:hidden}.sm-oyh{overflow-y:hidden}.sm-oxa{overflow-x:auto}.sm-oya{overflow-y:auto}.sm-cp{cursor:pointer}.sm-cd{cursor:default}.sm-cm{cursor:move}.sm-ct{cursor:text}.sm-cw{cursor:wait}.sm-cn{cursor:none}.sm-cna{cursor:not-allowed}
+     @for $i from 0 to 10{@for $j from 0 to 11{@if($j == 0){.sm-fg-#{$i}{flex-grow:#{$i}}}@else if($i < 1){.sm-fg-#{$i}#{$j}{flex-grow:$i + $j * .1}}@else if $i>1 and $i < 10{.sm-fg-#{$i}-#{$j}{flex-grow:$i + $j * .1}}}}@for $i from 0 to 11{.sm-fsh#{$i}{flex-shrink:$i}}@for $i from 2 to 10{.sm-lc#{$i}{display:-webkit-box;-webkit-line-clamp:$i;line-height:$lineClampHeight;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){@for $i from 2 to 10{.sm-lc#{$i}{display:block;height:$i * $lineClampHeight + rem}}}@for $i from 0 to 256{.sm-c#{$i}{color:rgb($i,$i,$i)}}@for $i from 1 to 10{.sm-fw#{$i * 100}{font-weight:$i * 100}}@for $i from 0 to $maximum{.sm-fs#{$i}px{font-size:#{$i}+ px}}@for $i from 1 to 11{@for $j from 0 to 10{@if($j == 0){.sm-fs#{$i}rem{font-size:#{$i}+ rem}}@else if($i < 10){.sm-fs#{$i}-#{$j}rem{font-size:$i + $j * .1rem}}}}@for $i from 1 to 10{@for $j from 0 to 10{@if($j == 0){.sm-lh#{$i}rem{line-height:#{$i}+ rem}}@else if($i < 10){.sm-lh#{$i}-#{$j}rem{line-height:$i + $j * .1rem}}}}@for $i from 0 to 10{@for $j from 0 to 10{@if($j == 0){.sm-lh#{$i}{line-height:$i}}@else if($i < 10){.sm-lh#{$i}-#{$j}{line-height:$i + $j * .1}}}}@for $i from 0 to $maximum{.sm-lh#{$i}px{line-height:#{$i}+ px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.sm-lh#{$i}vh{line-height:#{$i}+ vh}}@else if($i < 10){.sm-lh#{$i}-#{$j}vh{line-height:$i + $j * .1vh}}}}@for $i from 0 to $maximum{.sm-pa#{$i}px{padding:#{$i}+ px}}@for $i from 0 to $maximum{.sm-pt#{$i}px{padding-top:#{$i}+ px}}@for $i from 0 to $maximum{.sm-pr#{$i}px{padding-right:#{$i}+ px}}@for $i from 0 to $maximum{.sm-pb#{$i}px{padding-bottom:#{$i}+ px}}@for $i from 0 to $maximum{.sm-pl#{$i}px{padding-left:#{$i}+ px}}@for $i from 0 to $maximum{.sm-ma#{$i}px{margin:#{$i}+ px}}@for $i from 0 to $maximum{.sm-mt#{$i}px{margin-top:#{$i}+ px}}@for $i from 0 to $maximum{.sm-mr#{$i}px{margin-right:#{$i}+ px}}@for $i from 0 to $maximum{.sm-mb#{$i}px{margin-bottom:#{$i}+ px}}@for $i from 0 to $maximum{.sm-ml#{$i}px{margin-left:#{$i}+ px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.sm-pt#{$i}rem{padding-top:#{$i}+ rem}}@else if($i < 10){.sm-pt#{$i}-#{$j}rem{padding-top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.sm-pr#{$i}rem{padding-right:#{$i}+ rem}}@else if($i < 10){.sm-pr#{$i}-#{$j}rem{padding-right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.sm-pb#{$i}rem{padding-bottom:#{$i}+ rem}}@else if($i < 10){.sm-pb#{$i}-#{$j}rem{padding-bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.sm-pl#{$i}rem{padding-left:#{$i}+ rem}}@else if($i < 10){.sm-pl#{$i}-#{$j}rem{padding-left:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.sm-mt#{$i}rem{margin-top:#{$i}+ rem}}@else if($i < 10){.sm-mt#{$i}-#{$j}rem{margin-top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.sm-mr#{$i}rem{margin-right:#{$i}+ rem}}@else if($i < 10){.sm-mr#{$i}-#{$j}rem{margin-right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.sm-mb#{$i}rem{margin-bottom:#{$i}+ rem}}@else if($i < 10){.sm-mb#{$i}-#{$j}rem{margin-bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.sm-ml#{$i}rem{margin-left:#{$i}+ rem}}@else if($i < 10){.sm-ml#{$i}-#{$j}rem{margin-left:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.sm-w#{$i}p{width:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.sm-w#{$i}vw{width:#{$i}+ vw}}@for $i from 0 to $maximum{.sm-w#{$i}rem{width:#{$i}+ rem}}@for $i from 0 to 1921{.sm-w#{$i}px{width:$i + px}}@for $i from 0 to 1081{.sm-h#{$i}px{height:$i + px}}@for $i from 0 to $maximum{.sm-h#{$i}p{height:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.sm-h#{$i}vh{height:#{$i}+ vh}}@for $i from 0 to $maximum{.sm-h#{$i}vw{height:#{$i}+ vw}}@for $i from 0 to $maximum{.sm-t#{$i}px{top:$i + px}}@for $i from 0 to $maximum{.sm-t#{$i}p{top:$i + #{'%'}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.sm-t#{$i}rem{top:#{$i}+ rem}}@else if($i < 10){.sm-t#{$i}-#{$j}rem{top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.sm-r#{$i}px{right:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.sm-r#{$i}rem{right:#{$i}+ rem}}@else if($i < 10){.sm-r#{$i}-#{$j}rem{right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.sm-b#{$i}px{bottom:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.sm-b#{$i}rem{bottom:#{$i}+ rem}}@else if($i < 10){.sm-b#{$i}-#{$j}rem{bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.sm-l#{$i}px{left:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.sm-l#{$i}rem{left:#{$i}+ rem}}@else if($i < 10){.sm-l#{$i}-#{$j}rem{left:$i + $j * .1rem}}}}@for $i from 0 to 11{.sm-o#{$i}{opacity:$i * .1}}@for $i from 0 to 13{@if($i == 0){.sm-grid-#{$i}{width:auto}}@else{.sm-grid-#{$i}{width:$i * calc(100/12) + #{'%'}}}}@for $i from 0 to 13{.sm-offset-#{$i}{margin-left:$i * calc(100/12) + #{'%'}}}@for $i from 0 to 11{@for $j from 0 to 10{@if($j == 0){.sm-reverse#{$i}rem{margin:- #{$i}+ rem;[class^='grid-']{padding:#{$i}+ rem}}}@else if($i < 10){.sm-reverse#{$i}-#{$j}rem{margin:-($i + $j * .1rem);[class^='grid-']{padding:$i + $j * .1rem}}}}}
 }
 /* [ .es- ] Extra Small */
 @media(max-width:640px){
-    .es-bnc{background:center no-repeat}.es-bnt{background:top no-repeat}.es-bnb{background:bottom no-repeat}.es-bsc{background-size:cover}.es-bsi{background-size:initial}.es-baf{background-attachment:fixed}.es-tar{text-align:right}.es-tal{text-align:left}.es-tac{text-align:center}.es-taj{text-align:justify}.es-fr{float:right}.es-fl{float:left}.es-fn{float:none}.es-clb{clear:both}.es-clr{clear:right}.es-cll{clear:left}.es-cln{clear:none}.es-ps{position:static}.es-pr{position:relative}.es-pa{position:absolute}.es-pf{position:fixed}.es-pi{position:initial}.es-sticky{position:sticky}.es-db{display:block}.es-di{display:inline-block}.es-dn{display:none}.es-dt{display:table}.es-dtc{display:table-cell}.es-vh{visibility:hidden}.es-vv{visibility:visible}.es-vi{visibility:initial}.es-df{display:flex}.es-dif{display:inline-flex}.es-fdr{flex-direction:row}.es-fdrr{flex-direction:row-reverse}.es-fdc{flex-direction:column}.es-fdcr{flex-direction:column-reverse}.es-fwn{flex-wrap:nowrap}.es-fw{flex-wrap:wrap}.es-fwr{flex-wrap:wrap-reverse}.es-jcfs{justify-content:flex-start}.es-jcfe{justify-content:flex-end}.es-jcc{justify-content:center}.es-jcsb{justify-content:space-between}.es-jcsa{justify-content:space-around}.es-acs{align-content:stretch}.es-acfs{align-content:flex-start}.es-acfe{align-content:flex-end}.es-acc{align-content:center}.es-acsb{align-content:space-between}.es-acsa{align-content:space-around}.es-ais{align-items:stretch}.es-aifs{align-items:flex-start}.es-aife{align-items:flex-end}.es-aic{align-items:center}.es-aib{align-items:baseline}.es-asa{align-self:auto}.es-ass{align-self:stretch}.es-asfs{align-self:flex-start}.es-asfe{align-self:flex-end}.es-asc{align-self:center}.es-asb{align-self:baseline}.es-tlf{table-layout:fixed}.es-fsn{font-style:normal}.es-fsi{font-style:italic}.es-fso{font-style:oblique}.es-fs.initial{font-style:initial}.es-fs.inherit{font-style:inherit}.es-wb{word-break:break-all}.es-wsn{white-space:nowrap}.es-wsp{white-space:pre}.es-wspl{white-space:pre-line}.b0,.es-bn{border:0}.es-bt0{border-top:0}.es-br0{border-right:0}.es-bb0{border-bottom:0}.es-bl0{border-left:0}.es-vat{vertical-align:top}.es-vam{vertical-align:middle}.es-vab{vertical-align:bottom}.es-oa{overflow:auto}.es-oh{overflow:hidden}.es-oxh{overflow-x:hidden}.es-oyh{overflow-y:hidden}.es-oxa{overflow-x:auto}.es-oya{overflow-y:auto}.es-cp{cursor:pointer}.es-cd{cursor:default}.es-cm{cursor:move}.es-ct{cursor:text}.es-cw{cursor:wait}.es-cn{cursor:none}
-    @for $i from 2 to 10{.es-lc#{$i}{display:-webkit-box;-webkit-line-clamp:$i;line-height:$lineClampHeight;-webkit-box-orient:vertical;overflow:hidden;text-overflow: ellipsis;}}@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {@for $i from 2 to 10{.es-lc#{$i}{display:block;height:$i * $lineClampHeight + rem;}}}@for $i from 0 to 256{.es-c#{$i}{color:rgb($i, $i, $i);}}@for $i from 1 to 10{.es-fw#{$i * 100}{font-weight:$i * 100 }}@for $i from 0 to $maximum{.es-fs#{$i}px{font-size:#{$i}+ px }}@for $i from 1 to 11{@for $j from 0 to 10{@if($j == 0) {.es-fs#{$i}rem{font-size:#{$i}+ rem }}@else if($i < 10) {.es-fs#{$i}0#{$j}rem{font-size:$i + $j * 0.1rem }}}}@for $i from 1 to 10{@for $j from 0 to 10{@if($j == 0) {.es-lh#{$i}rem{line-height:#{$i}+ rem }}@else if($i < 10) {.es-lh#{$i}0#{$j}rem{line-height:$i + $j * 0.1rem }}}}@for $i from 0 to 10{@for $j from 0 to 10{@if($j == 0) {.es-lh#{$i}{line-height:$i }}@else if($i < 10) {.es-lh#{$i}0#{$j}{line-height:$i + $j * 0.1 }}}}@for $i from 0 to $maximum{.es-lh#{$i}px{line-height:#{$i}+ px }}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.es-lh#{$i}vh{line-height:#{$i}+ vh }}@else if($i < 10) {.es-lh#{$i}0#{$j}vh{line-height:$i + $j * 0.1vh }}}}@for $i from 0 to $maximum{@if($i == 0) {.es-pa#{$i}{padding:0 }}@else if($i < 10) {.es-pa#{$i}px{padding:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.es-pt#{$i}{padding-top:0 }}@else if($i < 10) {.es-pt#{$i}px{padding-top:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.es-pr#{$i}{padding-right:0 }}@else if($i < 10) {.es-pr#{$i}px{padding-right:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.es-pb#{$i}{padding-bottom:0 }}@else if($i < 10) {.es-pb#{$i}px{padding-bottom:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.es-pl#{$i}{padding-left:0 }}@else if($i < 10) {.es-pl#{$i}px{padding-left:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.es-ma#{$i}{margin:0 }}@else if($i < 10) {.es-ma#{$i}px{margin:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.es-mt#{$i}{margin-top:0 }}@else if($i < 10) {.es-mt#{$i}px{margin-top:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.es-mr#{$i}{margin-right:0 }}@else if($i < 10) {.es-mr#{$i}px{margin-right:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.es-mb#{$i}{margin-bottom:0 }}@else if($i < 10) {.es-mb#{$i}px{margin-bottom:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.es-ml#{$i}{margin-left:0 }}@else if($i < 10) {.es-ml#{$i}px{margin-left:#{$i}+ px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.es-pt#{$i}rem{padding-top:#{$i}+ rem }}@else if($i < 10) {.es-pt#{$i}0#{$j}rem{padding-top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.es-pr#{$i}rem{padding-right:#{$i}+ rem }}@else if($i < 10) {.es-pr#{$i}0#{$j}rem{padding-right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.es-pb#{$i}rem{padding-bottom:#{$i}+ rem }}@else if($i < 10) {.es-pb#{$i}0#{$j}rem{padding-bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.es-pl#{$i}rem{padding-left:#{$i}+ rem }}@else if($i < 10) {.es-pl#{$i}0#{$j}rem{padding-left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.es-mt#{$i}rem{margin-top:#{$i}+ rem }}@else if($i < 10) {.es-mt#{$i}0#{$j}rem{margin-top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.es-mr#{$i}rem{margin-right:#{$i}+ rem }}@else if($i < 10) {.es-mr#{$i}0#{$j}rem{margin-right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.es-mb#{$i}rem{margin-bottom:#{$i}+ rem }}@else if($i < 10) {.es-mb#{$i}0#{$j}rem{margin-bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.es-ml#{$i}rem{margin-left:#{$i}+ rem }}@else if($i < 10) {.es-ml#{$i}0#{$j}rem{margin-left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{.es-w#{$i}p{width:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.es-w#{$i}vw{width:#{$i}+ vw }}@for $i from 0 to $maximum{.es-w#{$i}rem{width:#{$i}+ rem }}@for $i from 0 to $maximum{@if($i == 0) {.es-w#{$i}{width:$i }}@else if($i < 10) {.es-w#{$i}px{width:$i + px }}}@for $i from 0 to $maximum{@if($i == 0) {.es-h#{$i}{height:$i }}@else if($i < 10) {.es-h#{$i}px{height:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.es-h#{$i}p{height:#{$i}+ #{'%'}}}@else if($i < 10) {.es-h#{$i}0#{$j}p{height:$i + $j * 0.1 + #{'%'}}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.es-h#{$i}vh{width:#{$i}+ vh }}@else if($i < 10) {.es-h#{$i}0#{$j}vh{width:$i + $j * 0.1vh }}}}@for $i from 0 to $maximum{@if($i == 0) {.es-t#{$i}{top:$i }}@else if($i < 10) {.es-t#{$i}px{top:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.es-t#{$i}rem{top:#{$i}+ rem }}@else if($i < 10) {.es-t#{$i}0#{$j}rem{top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.es-r#{$i}{right:$i }}@else if($i < 10) {.es-r#{$i}px{right:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.es-r#{$i}rem{right:#{$i}+ rem }}@else if($i < 10) {.es-r#{$i}0#{$j}rem{right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.es-b#{$i}{bottom:$i }}@else if($i < 10) {.es-b#{$i}px{bottom:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.es-b#{$i}rem{bottom:#{$i}+ rem }}@else if($i < 10) {.es-b#{$i}0#{$j}rem{bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.es-l#{$i}{left:$i }}@else if($i < 10) {.es-l#{$i}px{left:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.es-l#{$i}rem{left:#{$i}+ rem }}@else if($i < 10) {.es-l#{$i}0#{$j}rem{left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{.es-grid-#{$i}{width:$i * calc(100/12) + #{'%'}}}@for $i from 0 to $maximum{.es-offset-#{$i}{margin-left:$i * calc(100/12) + #{'%'}}}
+    .es-off{object-fit:fill}.es-ofc{object-fit:cover}.es-ofct{object-fit:contain}.es-ofn{object-fit:none}.es-ofsd{object-fit:scale-down}.es-tty-50p{transform:translateY(-50%)}.es-ttx-50p{transform:translateX(-50%)}.es-ha{height:auto}.es-hai{height:auto!important}.es-lhi{line-height:initial}.es-lhii{line-height:initial!important}.es-ta{top:auto}.es-ra{right:auto}.es-ba{bottom:auto}.es-la{left:auto}.es-tai{top:auto!important}.es-rai{right:auto!important}.es-bai{bottom:auto!important}.es-lai{left:auto!important}.es-t0{top:0}.es-r0{right:0}.es-b0{bottom:0}.es-l0{left:0}.es-t0i{top:0!important}.es-r0i{right:0!important}.es-b0i{bottom:0!important}.es-l0i{left:0!important}.es-pa0{padding:0}.es-pt0{padding-top:0}.es-pr0{padding-right:0}.es-pb0{padding-bottom:0}.es-pl0{padding-left:0}.es-pa0i{padding:0!important}.es-pt0i{padding-top:0!important}.es-pr0i{padding-right:0!important}.es-pb0i{padding-bottom:0!important}.es-pl0i{padding-left:0!important}.es-ma0{margin:0}.es-mt0{margin-top:0}.es-mr0{margin-right:0}.es-mb0{margin-bottom:0}.es-ml0{margin-left:0}.es-maai{margin:auto!important}.es-mta{margin-top:auto}.es-mra{margin-right:auto}.es-mba{margin-bottom:auto}.es-mla{margin-left:auto}.es-ma0i{margin:0!important}.es-mt0i{margin-top:0!important}.es-mr0i{margin-right:0!important}.es-mb0i{margin-bottom:0!important}.es-ml0i{margin-left:0!important}.es-bnc{background:no-repeat center}.es-bnt{background:no-repeat top}.es-bnb{background:no-repeat bottom}.es-bsc{background-size:cover}.es-bsi{background-size:initial}.es-baf{background-attachment:fixed}.es-tar{text-align:right}.es-tal{text-align:left}.es-tac{text-align:center}.es-taj{text-align:justify}.es-fr{float:right}.es-fl{float:left}.es-fn{float:none}.es-clb{clear:both}.es-clr{clear:right}.es-cll{clear:left}.es-cln{clear:none}.es-ps{position:static}.es-pr{position:relative}.es-pa{position:absolute}.es-pf{position:fixed}.es-pi{position:initial}.es-sticky{position:sticky}.es-di{display:inline}.es-db{display:block}.es-dib{display:inline-block}.es-dn{display:none}.es-dt{display:table}.es-dtc{display:table-cell}.es-vh{visibility:hidden}.es-vv{visibility:visible}.es-vi{visibility:initial}.es-df{display:flex}.es-dif{display:inline-flex}.es-fa{flex:auto}.es-fi{flex:initial}.es-fdr{flex-direction:row}.es-fdrr{flex-direction:row-reverse}.es-fdc{flex-direction:column}.es-fdcr{flex-direction:column-reverse}.es-fwn{flex-wrap:nowrap}.es-fw{flex-wrap:wrap}.es-fwr{flex-wrap:wrap-reverse}.es-fgu{flex-grow:unset}.es-jcfs{justify-content:flex-start}.es-jcfe{justify-content:flex-end}.es-jcc{justify-content:center}.es-jcsb{justify-content:space-between}.es-jcsa{justify-content:space-around}.es-acs{align-content:stretch}.es-acfs{align-content:flex-start}.es-acfe{align-content:flex-end}.es-acc{align-content:center}.es-acsb{align-content:space-between}.es-acsa{align-content:space-around}.es-ais{align-items:stretch}.es-aifs{align-items:flex-start}.es-aife{align-items:flex-end}.es-aic{align-items:center}.es-aib{align-items:baseline}.es-asa{align-self:auto}.es-ass{align-self:stretch}.es-asfs{align-self:flex-start}.es-asfe{align-self:flex-end}.es-asc{align-self:center}.es-asb{align-self:baseline}.es-fshi{flex-shrink:initial}.es-fshu{flex-shrink:unset}.es-tlf{table-layout:fixed}.es-tla{table-layout:auto}.es-fsn{font-style:normal}.es-fsi{font-style:italic}.es-fso{font-style:oblique}.es-fs.initial{font-style:initial}.es-fs.inherit{font-style:inherit}.es-wb{word-break:break-all}.es-wsn{white-space:nowrap}.es-wsp{white-space:pre}.es-wspl{white-space:pre-line}.es-wsi{white-space:initial}.es-b0{border:0}.es-bn{border:0}.es-bt0{border-top:0}.es-br0{border-right:0}.es-bb0{border-bottom:0}.es-bl0{border-left:0}.es-ba0i{border:0!important}.es-bni{border:0!important}.es-bt0i{border-top:0!important}.es-br0i{border-right:0!important}.es-bb0i{border-bottom:0!important}.es-bl0i{border-left:0!important}.es-vat{vertical-align:top}.es-vam{vertical-align:middle}.es-vab{vertical-align:bottom}.es-vabl{vertical-align:baseline}.es-oa{overflow:auto}.es-oh{overflow:hidden}.es-oxh{overflow-x:hidden}.es-oyh{overflow-y:hidden}.es-oxa{overflow-x:auto}.es-oya{overflow-y:auto}.es-cp{cursor:pointer}.es-cd{cursor:default}.es-cm{cursor:move}.es-ct{cursor:text}.es-cw{cursor:wait}.es-cn{cursor:none}.es-cna{cursor:not-allowed}
+     @for $i from 0 to 10{@for $j from 0 to 11{@if($j == 0){.es-fg-#{$i}{flex-grow:#{$i}}}@else if($i < 1){.es-fg-#{$i}#{$j}{flex-grow:$i + $j * .1}}@else if $i>1 and $i < 10{.es-fg-#{$i}-#{$j}{flex-grow:$i + $j * .1}}}}@for $i from 0 to 11{.es-fsh#{$i}{flex-shrink:$i}}@for $i from 2 to 10{.es-lc#{$i}{display:-webkit-box;-webkit-line-clamp:$i;line-height:$lineClampHeight;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){@for $i from 2 to 10{.es-lc#{$i}{display:block;height:$i * $lineClampHeight + rem}}}@for $i from 0 to 256{.es-c#{$i}{color:rgb($i,$i,$i)}}@for $i from 1 to 10{.es-fw#{$i * 100}{font-weight:$i * 100}}@for $i from 0 to $maximum{.es-fs#{$i}px{font-size:#{$i}+ px}}@for $i from 1 to 11{@for $j from 0 to 10{@if($j == 0){.es-fs#{$i}rem{font-size:#{$i}+ rem}}@else if($i < 10){.es-fs#{$i}-#{$j}rem{font-size:$i + $j * .1rem}}}}@for $i from 1 to 10{@for $j from 0 to 10{@if($j == 0){.es-lh#{$i}rem{line-height:#{$i}+ rem}}@else if($i < 10){.es-lh#{$i}-#{$j}rem{line-height:$i + $j * .1rem}}}}@for $i from 0 to 10{@for $j from 0 to 10{@if($j == 0){.es-lh#{$i}{line-height:$i}}@else if($i < 10){.es-lh#{$i}-#{$j}{line-height:$i + $j * .1}}}}@for $i from 0 to $maximum{.es-lh#{$i}px{line-height:#{$i}+ px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.es-lh#{$i}vh{line-height:#{$i}+ vh}}@else if($i < 10){.es-lh#{$i}-#{$j}vh{line-height:$i + $j * .1vh}}}}@for $i from 0 to $maximum{.es-pa#{$i}px{padding:#{$i}+ px}}@for $i from 0 to $maximum{.es-pt#{$i}px{padding-top:#{$i}+ px}}@for $i from 0 to $maximum{.es-pr#{$i}px{padding-right:#{$i}+ px}}@for $i from 0 to $maximum{.es-pb#{$i}px{padding-bottom:#{$i}+ px}}@for $i from 0 to $maximum{.es-pl#{$i}px{padding-left:#{$i}+ px}}@for $i from 0 to $maximum{.es-ma#{$i}px{margin:#{$i}+ px}}@for $i from 0 to $maximum{.es-mt#{$i}px{margin-top:#{$i}+ px}}@for $i from 0 to $maximum{.es-mr#{$i}px{margin-right:#{$i}+ px}}@for $i from 0 to $maximum{.es-mb#{$i}px{margin-bottom:#{$i}+ px}}@for $i from 0 to $maximum{.es-ml#{$i}px{margin-left:#{$i}+ px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.es-pt#{$i}rem{padding-top:#{$i}+ rem}}@else if($i < 10){.es-pt#{$i}-#{$j}rem{padding-top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.es-pr#{$i}rem{padding-right:#{$i}+ rem}}@else if($i < 10){.es-pr#{$i}-#{$j}rem{padding-right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.es-pb#{$i}rem{padding-bottom:#{$i}+ rem}}@else if($i < 10){.es-pb#{$i}-#{$j}rem{padding-bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.es-pl#{$i}rem{padding-left:#{$i}+ rem}}@else if($i < 10){.es-pl#{$i}-#{$j}rem{padding-left:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.es-mt#{$i}rem{margin-top:#{$i}+ rem}}@else if($i < 10){.es-mt#{$i}-#{$j}rem{margin-top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.es-mr#{$i}rem{margin-right:#{$i}+ rem}}@else if($i < 10){.es-mr#{$i}-#{$j}rem{margin-right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.es-mb#{$i}rem{margin-bottom:#{$i}+ rem}}@else if($i < 10){.es-mb#{$i}-#{$j}rem{margin-bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.es-ml#{$i}rem{margin-left:#{$i}+ rem}}@else if($i < 10){.es-ml#{$i}-#{$j}rem{margin-left:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.es-w#{$i}p{width:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.es-w#{$i}vw{width:#{$i}+ vw}}@for $i from 0 to $maximum{.es-w#{$i}rem{width:#{$i}+ rem}}@for $i from 0 to 1921{.es-w#{$i}px{width:$i + px}}@for $i from 0 to 1081{.es-h#{$i}px{height:$i + px}}@for $i from 0 to $maximum{.es-h#{$i}p{height:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.es-h#{$i}vh{height:#{$i}+ vh}}@for $i from 0 to $maximum{.es-h#{$i}vw{height:#{$i}+ vw}}@for $i from 0 to $maximum{.es-t#{$i}px{top:$i + px}}@for $i from 0 to $maximum{.es-t#{$i}p{top:$i + #{'%'}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.es-t#{$i}rem{top:#{$i}+ rem}}@else if($i < 10){.es-t#{$i}-#{$j}rem{top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.es-r#{$i}px{right:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.es-r#{$i}rem{right:#{$i}+ rem}}@else if($i < 10){.es-r#{$i}-#{$j}rem{right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.es-b#{$i}px{bottom:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.es-b#{$i}rem{bottom:#{$i}+ rem}}@else if($i < 10){.es-b#{$i}-#{$j}rem{bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.es-l#{$i}px{left:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.es-l#{$i}rem{left:#{$i}+ rem}}@else if($i < 10){.es-l#{$i}-#{$j}rem{left:$i + $j * .1rem}}}}@for $i from 0 to 11{.es-o#{$i}{opacity:$i * .1}}@for $i from 0 to 13{@if($i == 0){.es-grid-#{$i}{width:auto}}@else{.es-grid-#{$i}{width:$i * calc(100/12) + #{'%'}}}}@for $i from 0 to 13{.es-offset-#{$i}{margin-left:$i * calc(100/12) + #{'%'}}}@for $i from 0 to 11{@for $j from 0 to 10{@if($j == 0){.es-reverse#{$i}rem{margin:- #{$i}+ rem;[class^='grid-']{padding:#{$i}+ rem}}}@else if($i < 10){.es-reverse#{$i}-#{$j}rem{margin:-($i + $j * .1rem);[class^='grid-']{padding:$i + $j * .1rem}}}}}
 }
 /* [ .us- ] Ultra Small */
 @media(max-width:420px){
-    .us-bnc{background:center no-repeat}.us-bnt{background:top no-repeat}.us-bnb{background:bottom no-repeat}.us-bsc{background-size:cover}.us-bsi{background-size:initial}.us-baf{background-attachment:fixed}.us-tar{text-align:right}.us-tal{text-align:left}.us-tac{text-align:center}.us-taj{text-align:justify}.us-fr{float:right}.us-fl{float:left}.us-fn{float:none}.us-clb{clear:both}.us-clr{clear:right}.us-cll{clear:left}.us-cln{clear:none}.us-ps{position:static}.us-pr{position:relative}.us-pa{position:absolute}.us-pf{position:fixed}.us-pi{position:initial}.us-sticky{position:sticky}.us-db{display:block}.us-di{display:inline-block}.us-dn{display:none}.us-dt{display:table}.us-dtc{display:table-cell}.us-vh{visibility:hidden}.us-vv{visibility:visible}.us-vi{visibility:initial}.us-df{display:flex}.us-dif{display:inline-flex}.us-fdr{flex-direction:row}.us-fdrr{flex-direction:row-reverse}.us-fdc{flex-direction:column}.us-fdcr{flex-direction:column-reverse}.us-fwn{flex-wrap:nowrap}.us-fw{flex-wrap:wrap}.us-fwr{flex-wrap:wrap-reverse}.us-jcfs{justify-content:flex-start}.us-jcfe{justify-content:flex-end}.us-jcc{justify-content:center}.us-jcsb{justify-content:space-between}.us-jcsa{justify-content:space-around}.us-acs{align-content:stretch}.us-acfs{align-content:flex-start}.us-acfe{align-content:flex-end}.us-acc{align-content:center}.us-acsb{align-content:space-between}.us-acsa{align-content:space-around}.us-ais{align-items:stretch}.us-aifs{align-items:flex-start}.us-aife{align-items:flex-end}.us-aic{align-items:center}.us-aib{align-items:baseline}.us-asa{align-self:auto}.us-ass{align-self:stretch}.us-asfs{align-self:flex-start}.us-asfe{align-self:flex-end}.us-asc{align-self:center}.us-asb{align-self:baseline}.us-tlf{table-layout:fixed}.us-fsn{font-style:normal}.us-fsi{font-style:italic}.us-fso{font-style:oblique}.us-fs.initial{font-style:initial}.us-fs.inherit{font-style:inherit}.us-wb{word-break:break-all}.us-wsn{white-space:nowrap}.us-wsp{white-space:pre}.us-wspl{white-space:pre-line}.b0,.us-bn{border:0}.us-bt0{border-top:0}.us-br0{border-right:0}.us-bb0{border-bottom:0}.us-bl0{border-left:0}.us-vat{vertical-align:top}.us-vam{vertical-align:middle}.us-vab{vertical-align:bottom}.us-oa{overflow:auto}.us-oh{overflow:hidden}.us-oxh{overflow-x:hidden}.us-oyh{overflow-y:hidden}.us-oxa{overflow-x:auto}.us-oya{overflow-y:auto}.us-cp{cursor:pointer}.us-cd{cursor:default}.us-cm{cursor:move}.us-ct{cursor:text}.us-cw{cursor:wait}.us-cn{cursor:none}
-     @for $i from 2 to 10{.us-lc#{$i}{display:-webkit-box;-webkit-line-clamp:$i;line-height:$lineClampHeight;-webkit-box-orient:vertical;overflow:hidden;text-overflow: ellipsis;}}@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {@for $i from 2 to 10{.us-lc#{$i}{display:block;height:$i * $lineClampHeight + rem;}}}@for $i from 0 to 256{.us-c#{$i}{color:rgb($i, $i, $i);}}@for $i from 1 to 10{.us-fw#{$i * 100}{font-weight:$i * 100 }}@for $i from 0 to $maximum{.us-fs#{$i}px{font-size:#{$i}+ px }}@for $i from 1 to 11{@for $j from 0 to 10{@if($j == 0) {.us-fs#{$i}rem{font-size:#{$i}+ rem }}@else if($i < 10) {.us-fs#{$i}0#{$j}rem{font-size:$i + $j * 0.1rem }}}}@for $i from 1 to 10{@for $j from 0 to 10{@if($j == 0) {.us-lh#{$i}rem{line-height:#{$i}+ rem }}@else if($i < 10) {.us-lh#{$i}0#{$j}rem{line-height:$i + $j * 0.1rem }}}}@for $i from 0 to 10{@for $j from 0 to 10{@if($j == 0) {.us-lh#{$i}{line-height:$i }}@else if($i < 10) {.us-lh#{$i}0#{$j}{line-height:$i + $j * 0.1 }}}}@for $i from 0 to $maximum{.us-lh#{$i}px{line-height:#{$i}+ px }}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.us-lh#{$i}vh{line-height:#{$i}+ vh }}@else if($i < 10) {.us-lh#{$i}0#{$j}vh{line-height:$i + $j * 0.1vh }}}}@for $i from 0 to $maximum{@if($i == 0) {.us-pa#{$i}{padding:0 }}@else if($i < 10) {.us-pa#{$i}px{padding:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.us-pt#{$i}{padding-top:0 }}@else if($i < 10) {.us-pt#{$i}px{padding-top:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.us-pr#{$i}{padding-right:0 }}@else if($i < 10) {.us-pr#{$i}px{padding-right:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.us-pb#{$i}{padding-bottom:0 }}@else if($i < 10) {.us-pb#{$i}px{padding-bottom:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.us-pl#{$i}{padding-left:0 }}@else if($i < 10) {.us-pl#{$i}px{padding-left:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.us-ma#{$i}{margin:0 }}@else if($i < 10) {.us-ma#{$i}px{margin:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.us-mt#{$i}{margin-top:0 }}@else if($i < 10) {.us-mt#{$i}px{margin-top:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.us-mr#{$i}{margin-right:0 }}@else if($i < 10) {.us-mr#{$i}px{margin-right:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.us-mb#{$i}{margin-bottom:0 }}@else if($i < 10) {.us-mb#{$i}px{margin-bottom:#{$i}+ px }}}@for $i from 0 to $maximum{@if($i == 0) {.us-ml#{$i}{margin-left:0 }}@else if($i < 10) {.us-ml#{$i}px{margin-left:#{$i}+ px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.us-pt#{$i}rem{padding-top:#{$i}+ rem }}@else if($i < 10) {.us-pt#{$i}0#{$j}rem{padding-top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.us-pr#{$i}rem{padding-right:#{$i}+ rem }}@else if($i < 10) {.us-pr#{$i}0#{$j}rem{padding-right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.us-pb#{$i}rem{padding-bottom:#{$i}+ rem }}@else if($i < 10) {.us-pb#{$i}0#{$j}rem{padding-bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.us-pl#{$i}rem{padding-left:#{$i}+ rem }}@else if($i < 10) {.us-pl#{$i}0#{$j}rem{padding-left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.us-mt#{$i}rem{margin-top:#{$i}+ rem }}@else if($i < 10) {.us-mt#{$i}0#{$j}rem{margin-top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.us-mr#{$i}rem{margin-right:#{$i}+ rem }}@else if($i < 10) {.us-mr#{$i}0#{$j}rem{margin-right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.us-mb#{$i}rem{margin-bottom:#{$i}+ rem }}@else if($i < 10) {.us-mb#{$i}0#{$j}rem{margin-bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.us-ml#{$i}rem{margin-left:#{$i}+ rem }}@else if($i < 10) {.us-ml#{$i}0#{$j}rem{margin-left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{.us-w#{$i}p{width:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.us-w#{$i}vw{width:#{$i}+ vw }}@for $i from 0 to $maximum{.us-w#{$i}rem{width:#{$i}+ rem }}@for $i from 0 to $maximum{@if($i == 0) {.us-w#{$i}{width:$i }}@else if($i < 10) {.us-w#{$i}px{width:$i + px }}}@for $i from 0 to $maximum{@if($i == 0) {.us-h#{$i}{height:$i }}@else if($i < 10) {.us-h#{$i}px{height:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.us-h#{$i}p{height:#{$i}+ #{'%'}}}@else if($i < 10) {.us-h#{$i}0#{$j}p{height:$i + $j * 0.1 + #{'%'}}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.us-h#{$i}vh{width:#{$i}+ vh }}@else if($i < 10) {.us-h#{$i}0#{$j}vh{width:$i + $j * 0.1vh }}}}@for $i from 0 to $maximum{@if($i == 0) {.us-t#{$i}{top:$i }}@else if($i < 10) {.us-t#{$i}px{top:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.us-t#{$i}rem{top:#{$i}+ rem }}@else if($i < 10) {.us-t#{$i}0#{$j}rem{top:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.us-r#{$i}{right:$i }}@else if($i < 10) {.us-r#{$i}px{right:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.us-r#{$i}rem{right:#{$i}+ rem }}@else if($i < 10) {.us-r#{$i}0#{$j}rem{right:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.us-b#{$i}{bottom:$i }}@else if($i < 10) {.us-b#{$i}px{bottom:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.us-b#{$i}rem{bottom:#{$i}+ rem }}@else if($i < 10) {.us-b#{$i}0#{$j}rem{bottom:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{@if($i == 0) {.us-l#{$i}{left:$i }}@else if($i < 10) {.us-l#{$i}px{left:$i + px }}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0) {.us-l#{$i}rem{left:#{$i}+ rem }}@else if($i < 10) {.us-l#{$i}0#{$j}rem{left:$i + $j * 0.1rem }}}}@for $i from 0 to $maximum{.us-grid-#{$i}{width:$i * calc(100/12) + #{'%'}}}@for $i from 0 to $maximum{.us-offset-#{$i}{margin-left:$i * calc(100/12) + #{'%'}}}
+    .us-off{object-fit:fill}.us-ofc{object-fit:cover}.us-ofct{object-fit:contain}.us-ofn{object-fit:none}.us-ofsd{object-fit:scale-down}.us-tty-50p{transform:translateY(-50%)}.us-ttx-50p{transform:translateX(-50%)}.us-ha{height:auto}.us-hai{height:auto!important}.us-lhi{line-height:initial}.us-lhii{line-height:initial!important}.us-ta{top:auto}.us-ra{right:auto}.us-ba{bottom:auto}.us-la{left:auto}.us-tai{top:auto!important}.us-rai{right:auto!important}.us-bai{bottom:auto!important}.us-lai{left:auto!important}.us-t0{top:0}.us-r0{right:0}.us-b0{bottom:0}.us-l0{left:0}.us-t0i{top:0!important}.us-r0i{right:0!important}.us-b0i{bottom:0!important}.us-l0i{left:0!important}.us-pa0{padding:0}.us-pt0{padding-top:0}.us-pr0{padding-right:0}.us-pb0{padding-bottom:0}.us-pl0{padding-left:0}.us-pa0i{padding:0!important}.us-pt0i{padding-top:0!important}.us-pr0i{padding-right:0!important}.us-pb0i{padding-bottom:0!important}.us-pl0i{padding-left:0!important}.us-ma0{margin:0}.us-mt0{margin-top:0}.us-mr0{margin-right:0}.us-mb0{margin-bottom:0}.us-ml0{margin-left:0}.us-maai{margin:auto!important}.us-mta{margin-top:auto}.us-mra{margin-right:auto}.us-mba{margin-bottom:auto}.us-mla{margin-left:auto}.us-ma0i{margin:0!important}.us-mt0i{margin-top:0!important}.us-mr0i{margin-right:0!important}.us-mb0i{margin-bottom:0!important}.us-ml0i{margin-left:0!important}.us-bnc{background:no-repeat center}.us-bnt{background:no-repeat top}.us-bnb{background:no-repeat bottom}.us-bsc{background-size:cover}.us-bsi{background-size:initial}.us-baf{background-attachment:fixed}.us-tar{text-align:right}.us-tal{text-align:left}.us-tac{text-align:center}.us-taj{text-align:justify}.us-fr{float:right}.us-fl{float:left}.us-fn{float:none}.us-clb{clear:both}.us-clr{clear:right}.us-cll{clear:left}.us-cln{clear:none}.us-ps{position:static}.us-pr{position:relative}.us-pa{position:absolute}.us-pf{position:fixed}.us-pi{position:initial}.us-sticky{position:sticky}.us-di{display:inline}.us-db{display:block}.us-dib{display:inline-block}.us-dn{display:none}.us-dt{display:table}.us-dtc{display:table-cell}.us-vh{visibility:hidden}.us-vv{visibility:visible}.us-vi{visibility:initial}.us-df{display:flex}.us-dif{display:inline-flex}.us-fa{flex:auto}.us-fi{flex:initial}.us-fdr{flex-direction:row}.us-fdrr{flex-direction:row-reverse}.us-fdc{flex-direction:column}.us-fdcr{flex-direction:column-reverse}.us-fwn{flex-wrap:nowrap}.us-fw{flex-wrap:wrap}.us-fwr{flex-wrap:wrap-reverse}.us-fgu{flex-grow:unset}.us-jcfs{justify-content:flex-start}.us-jcfe{justify-content:flex-end}.us-jcc{justify-content:center}.us-jcsb{justify-content:space-between}.us-jcsa{justify-content:space-around}.us-acs{align-content:stretch}.us-acfs{align-content:flex-start}.us-acfe{align-content:flex-end}.us-acc{align-content:center}.us-acsb{align-content:space-between}.us-acsa{align-content:space-around}.us-ais{align-items:stretch}.us-aifs{align-items:flex-start}.us-aife{align-items:flex-end}.us-aic{align-items:center}.us-aib{align-items:baseline}.us-asa{align-self:auto}.us-ass{align-self:stretch}.us-asfs{align-self:flex-start}.us-asfe{align-self:flex-end}.us-asc{align-self:center}.us-asb{align-self:baseline}.us-fshi{flex-shrink:initial}.us-fshu{flex-shrink:unset}.us-tlf{table-layout:fixed}.us-tla{table-layout:auto}.us-fsn{font-style:normal}.us-fsi{font-style:italic}.us-fso{font-style:oblique}.us-fs.initial{font-style:initial}.us-fs.inherit{font-style:inherit}.us-wb{word-break:break-all}.us-wsn{white-space:nowrap}.us-wsp{white-space:pre}.us-wspl{white-space:pre-line}.us-wsi{white-space:initial}.us-b0{border:0}.us-bn{border:0}.us-bt0{border-top:0}.us-br0{border-right:0}.us-bb0{border-bottom:0}.us-bl0{border-left:0}.us-ba0i{border:0!important}.us-bni{border:0!important}.us-bt0i{border-top:0!important}.us-br0i{border-right:0!important}.us-bb0i{border-bottom:0!important}.us-bl0i{border-left:0!important}.us-vat{vertical-align:top}.us-vam{vertical-align:middle}.us-vab{vertical-align:bottom}.us-vabl{vertical-align:baseline}.us-oa{overflow:auto}.us-oh{overflow:hidden}.us-oxh{overflow-x:hidden}.us-oyh{overflow-y:hidden}.us-oxa{overflow-x:auto}.us-oya{overflow-y:auto}.us-cp{cursor:pointer}.us-cd{cursor:default}.us-cm{cursor:move}.us-ct{cursor:text}.us-cw{cursor:wait}.us-cn{cursor:none}.us-cna{cursor:not-allowed}
+     @for $i from 0 to 10{@for $j from 0 to 11{@if($j == 0){.us-fg-#{$i}{flex-grow:#{$i}}}@else if($i < 1){.us-fg-#{$i}#{$j}{flex-grow:$i + $j * .1}}@else if $i>1 and $i < 10{.us-fg-#{$i}-#{$j}{flex-grow:$i + $j * .1}}}}@for $i from 0 to 11{.us-fsh#{$i}{flex-shrink:$i}}@for $i from 2 to 10{.us-lc#{$i}{display:-webkit-box;-webkit-line-clamp:$i;line-height:$lineClampHeight;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){@for $i from 2 to 10{.us-lc#{$i}{display:block;height:$i * $lineClampHeight + rem}}}@for $i from 0 to 256{.us-c#{$i}{color:rgb($i,$i,$i)}}@for $i from 1 to 10{.us-fw#{$i * 100}{font-weight:$i * 100}}@for $i from 0 to $maximum{.us-fs#{$i}px{font-size:#{$i}+ px}}@for $i from 1 to 11{@for $j from 0 to 10{@if($j == 0){.us-fs#{$i}rem{font-size:#{$i}+ rem}}@else if($i < 10){.us-fs#{$i}-#{$j}rem{font-size:$i + $j * .1rem}}}}@for $i from 1 to 10{@for $j from 0 to 10{@if($j == 0){.us-lh#{$i}rem{line-height:#{$i}+ rem}}@else if($i < 10){.us-lh#{$i}-#{$j}rem{line-height:$i + $j * .1rem}}}}@for $i from 0 to 10{@for $j from 0 to 10{@if($j == 0){.us-lh#{$i}{line-height:$i}}@else if($i < 10){.us-lh#{$i}-#{$j}{line-height:$i + $j * .1}}}}@for $i from 0 to $maximum{.us-lh#{$i}px{line-height:#{$i}+ px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.us-lh#{$i}vh{line-height:#{$i}+ vh}}@else if($i < 10){.us-lh#{$i}-#{$j}vh{line-height:$i + $j * .1vh}}}}@for $i from 0 to $maximum{.us-pa#{$i}px{padding:#{$i}+ px}}@for $i from 0 to $maximum{.us-pt#{$i}px{padding-top:#{$i}+ px}}@for $i from 0 to $maximum{.us-pr#{$i}px{padding-right:#{$i}+ px}}@for $i from 0 to $maximum{.us-pb#{$i}px{padding-bottom:#{$i}+ px}}@for $i from 0 to $maximum{.us-pl#{$i}px{padding-left:#{$i}+ px}}@for $i from 0 to $maximum{.us-ma#{$i}px{margin:#{$i}+ px}}@for $i from 0 to $maximum{.us-mt#{$i}px{margin-top:#{$i}+ px}}@for $i from 0 to $maximum{.us-mr#{$i}px{margin-right:#{$i}+ px}}@for $i from 0 to $maximum{.us-mb#{$i}px{margin-bottom:#{$i}+ px}}@for $i from 0 to $maximum{.us-ml#{$i}px{margin-left:#{$i}+ px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.us-pt#{$i}rem{padding-top:#{$i}+ rem}}@else if($i < 10){.us-pt#{$i}-#{$j}rem{padding-top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.us-pr#{$i}rem{padding-right:#{$i}+ rem}}@else if($i < 10){.us-pr#{$i}-#{$j}rem{padding-right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.us-pb#{$i}rem{padding-bottom:#{$i}+ rem}}@else if($i < 10){.us-pb#{$i}-#{$j}rem{padding-bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.us-pl#{$i}rem{padding-left:#{$i}+ rem}}@else if($i < 10){.us-pl#{$i}-#{$j}rem{padding-left:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.us-mt#{$i}rem{margin-top:#{$i}+ rem}}@else if($i < 10){.us-mt#{$i}-#{$j}rem{margin-top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.us-mr#{$i}rem{margin-right:#{$i}+ rem}}@else if($i < 10){.us-mr#{$i}-#{$j}rem{margin-right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.us-mb#{$i}rem{margin-bottom:#{$i}+ rem}}@else if($i < 10){.us-mb#{$i}-#{$j}rem{margin-bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.us-ml#{$i}rem{margin-left:#{$i}+ rem}}@else if($i < 10){.us-ml#{$i}-#{$j}rem{margin-left:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.us-w#{$i}p{width:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.us-w#{$i}vw{width:#{$i}+ vw}}@for $i from 0 to $maximum{.us-w#{$i}rem{width:#{$i}+ rem}}@for $i from 0 to 1921{.us-w#{$i}px{width:$i + px}}@for $i from 0 to 1081{.us-h#{$i}px{height:$i + px}}@for $i from 0 to $maximum{.us-h#{$i}p{height:#{$i}+ #{'%'}}}@for $i from 0 to $maximum{.us-h#{$i}vh{height:#{$i}+ vh}}@for $i from 0 to $maximum{.us-h#{$i}vw{height:#{$i}+ vw}}@for $i from 0 to $maximum{.us-t#{$i}px{top:$i + px}}@for $i from 0 to $maximum{.us-t#{$i}p{top:$i + #{'%'}}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.us-t#{$i}rem{top:#{$i}+ rem}}@else if($i < 10){.us-t#{$i}-#{$j}rem{top:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.us-r#{$i}px{right:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.us-r#{$i}rem{right:#{$i}+ rem}}@else if($i < 10){.us-r#{$i}-#{$j}rem{right:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.us-b#{$i}px{bottom:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.us-b#{$i}rem{bottom:#{$i}+ rem}}@else if($i < 10){.us-b#{$i}-#{$j}rem{bottom:$i + $j * .1rem}}}}@for $i from 0 to $maximum{.us-l#{$i}px{left:$i + px}}@for $i from 0 to $maximum{@for $j from 0 to 10{@if($j == 0){.us-l#{$i}rem{left:#{$i}+ rem}}@else if($i < 10){.us-l#{$i}-#{$j}rem{left:$i + $j * .1rem}}}}@for $i from 0 to 11{.us-o#{$i}{opacity:$i * .1}}@for $i from 0 to 13{@if($i == 0){.us-grid-#{$i}{width:auto}}@else{.us-grid-#{$i}{width:$i * calc(100/12) + #{'%'}}}}@for $i from 0 to 13{.us-offset-#{$i}{margin-left:$i * calc(100/12) + #{'%'}}}@for $i from 0 to 11{@for $j from 0 to 10{@if($j == 0){.us-reverse#{$i}rem{margin:- #{$i}+ rem;[class^='grid-']{padding:#{$i}+ rem}}}@else if($i < 10){.us-reverse#{$i}-#{$j}rem{margin:-($i + $j * .1rem);[class^='grid-']{padding:$i + $j * .1rem}}}}}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
